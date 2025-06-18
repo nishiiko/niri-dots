@@ -264,6 +264,7 @@ spawn-at-startup "otd-daemon"
 spawn-at-startup "sh" "-c" "swww-daemon"
 spawn-at-startup "sh" "-c" "swww img $HOME/Pictures/Wallpapers/omori.png --transition-type grow --transition-duration 3"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
+spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/portals.sh"
 spawn-at-startup "xwayland-satellite"
 
 environment {
@@ -461,47 +462,27 @@ binds {
     Mod+Shift+Alt+Down  { move-column-to-monitor-down; }
     Mod+Shift+Alt+Up    { move-column-to-monitor-up; }
     Mod+Shift+Alt+Right { move-column-to-monitor-right; }
-    Mod+Shift+Alt+H     { move-column-to-monitor-left; }
-    Mod+Shift+Alt+J     { move-column-to-monitor-down; }
-    Mod+Shift+Alt+K     { move-column-to-monitor-up; }
-    Mod+Shift+Alt+L     { move-column-to-monitor-right; }
+    Mod+Shift+Alt+M     { move-column-to-monitor-left; }
+    Mod+Shift+Alt+N     { move-column-to-monitor-down; }
+    Mod+Shift+Alt+E     { move-column-to-monitor-up; }
+    Mod+Shift+Alt+I     { move-column-to-monitor-right; }
 
-    // Alternatively, there are commands to move just a single window:
-    // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
-    // ...
-
-    // And you can also move a whole workspace to another monitor:
-    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
-    // ...
-
+    Mod+Shift+J         { move-workspace-to-monitor-left; }
+    Mod+Shift+Y         { move-workspace-to-monitor-right; }
+    
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+Y              { focus-workspace-down; }
+    Mod+L              { focus-workspace-down; }
     Mod+U              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+Y         { move-column-to-workspace-down; }
+    Mod+Ctrl+L         { move-column-to-workspace-down; }
     Mod+Ctrl+U         { move-column-to-workspace-up; }
-
-    // Alternatively, there are commands to move just a single window:
-    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
-    // ...
 
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+Y         { move-workspace-down; }
+    Mod+Shift+L         { move-workspace-down; }
     Mod+Shift+U         { move-workspace-up; }
-
-    // You can bind mouse wheel scroll ticks using the following syntax.
-    // These binds will change direction based on the natural-scroll setting.
-    //
-    // To avoid scrolling through workspaces really fast, you can use
-    // the cooldown-ms property. The bind will be rate-limited to this value.
-    // You can set a cooldown on any bind, but it's most useful for the wheel.
-    //Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-    //Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-    //Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
-    //Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
     Mod+TouchpadScrollLeft          cooldown-ms=150 { focus-column-right; }
     Mod+TouchpadScrollRight         cooldown-ms=150 { focus-column-left; }
