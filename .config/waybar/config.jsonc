@@ -1,0 +1,146 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "height": 60, // Waybar height (to be removed for auto height)
+    // "width": 1920, // Waybar width
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "spacing": 4, // Gaps between modules (4px)
+    "margin-top": 0,
+    "margin-bottom": 0,
+    // Choose the order of the modules
+    "modules-left": [
+        "wlr/taskbar",
+        "network"
+    ],
+    "modules-center": [
+        "niri/workspaces"
+    ],
+    "modules-right": [
+        "privacy",
+        "group/hardware",
+        "pulseaudio",
+        "tray",
+        "clock"
+    ],
+    
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
+        }
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "battery"
+        ]
+    },
+	
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "icon-theme": "Colloid-Purple-Dark",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "tray": {
+        "icon-size": 24,
+        "spacing": 8
+    },
+    
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1,
+		"format": "{:%y/%m/%d - %H:%M:%S}"
+    },
+    
+    "cpu": {
+        "format": "{usage:02}%  ",
+        "interval": 2
+    },
+    
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 75,
+        "interval": 2,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+    	"tooltip": false
+    },
+    
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": " {capacity}% {icon} ",
+        "format-charging": " {capacity}% {icon} ",
+        "format-plugged": " {capacity}% {icon} ",
+        "format-alt": "{time} {icon}  {power:2.1f}W",
+        "design-capacity": true,
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 1
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid}  ",
+        "format-ethernet": "{ipaddr}/{cidr}  ",
+        "tooltip-format": "{ifname} via {gwaddr}  ",
+        "format-linked": "{ifname} (No IP)  ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "killall iwgtk;iwgtk",
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 2
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} ",
+        "format-bluetooth-muted": " {icon} ",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    }
+}
