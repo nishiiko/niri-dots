@@ -7,7 +7,7 @@ input {
     keyboard {
         xkb {
             layout "gb(colemak_dh),gb"
-            options "grp:win_space_toggle,ctrl:nocaps"
+            options "ctrl:nocaps"
         }
         numlock
     }
@@ -206,11 +206,6 @@ binds {
     Mod+Shift+N     { move-window-up-or-to-workspace-up; }
     Mod+Shift+I     { move-column-right; }
 
-    // Mod+J     { focus-window-or-workspace-down; }
-    // Mod+K     { focus-window-or-workspace-up; }
-    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
-
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
     Mod+Ctrl+Home { move-column-to-first; }
@@ -261,10 +256,10 @@ binds {
     Mod+Shift+TouchpadScrollDown cooldown-ms=150              { move-window-up; }
     Mod+Shift+TouchpadScrollUp    cooldown-ms=150          { move-window-down; }
 
-    Mod+Alt+TouchpadScrollRight   cooldown-ms=150   { set-column-width "+10%"; }
-    Mod+Alt+TouchpadScrollLeft    cooldown-ms=150   { set-column-width "-10%"; }
-    Mod+Alt+TouchpadScrollUp      { set-window-height "+10%"; }
-    Mod+Alt+TouchpadScrollDown    { set-window-height "-10%"; }
+    Mod+Alt+TouchpadScrollRight   cooldown-ms=150   { set-column-width "+5%"; }
+    Mod+Alt+TouchpadScrollLeft    cooldown-ms=150   { set-column-width "-5%"; }
+    Mod+Alt+TouchpadScrollUp      { set-window-height "+5%"; }
+    Mod+Alt+TouchpadScrollDown    { set-window-height "-5%"; }
     Mod+Ctrl+TouchpadScrollDown cooldown-ms=150              { focus-workspace-down; }
     Mod+Ctrl+TouchpadScrollUp    cooldown-ms=150          { focus-workspace-up; }
     Mod+Ctrl+Alt+TouchpadScrollDown cooldown-ms=150 { move-workspace-down; }
@@ -276,10 +271,10 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp     { move-workspace-up; }
     Mod+WheelScrollDown         { focus-column-right; }
     Mod+WheelScrollUp           { focus-column-left; }
-    Mod+Ctrl+WheelScrollUp      { set-column-width "+10%"; }
-    Mod+Ctrl+WheelScrollDown    { set-column-width "-10%"; }
-    Mod+Alt+WheelScrollUp      { set-window-height "+10%"; }
-    Mod+Alt+WheelScrollDown    { set-window-height "-10%"; }
+    Mod+Ctrl+WheelScrollUp      { set-column-width "+5%"; }
+    Mod+Ctrl+WheelScrollDown    { set-column-width "-5%"; }
+    Mod+Alt+WheelScrollUp      { set-window-height "+5%"; }
+    Mod+Alt+WheelScrollDown    { set-window-height "-5%"; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -308,66 +303,34 @@ binds {
     Mod+F { maximize-column; }
     Mod+Return { fullscreen-window; }
 
-    // Expand the focused column to space not taken up by other fully visible columns.
-    // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
 
     Mod+C { center-column; }
 
-    // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
 
-    // Finer width adjustments.
-    // This command can also:
-    // * set width in pixels: "1000"
-    // * adjust width in pixels: "-5" or "+5"
-    // * set width as a percentage of screen width: "25%"
-    // * adjust width as a percentage of screen width: "-10%" or "+10%"
-    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
-    // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
+    Mod+Minus { set-column-width "-5%"; }
+    Mod+Equal { set-column-width "+5%"; }
 
-    // Finer height adjustments when in column with other windows.
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Shift+Minus { set-window-height "-5%"; }
+    Mod+Shift+Equal { set-window-height "+5%"; }
 
-    // Move the focused window between the floating and the tiling layout.
     Mod+W       { toggle-window-floating; }
     Mod+Shift+W { switch-focus-between-floating-and-tiling; }
 
-    // Toggle tabbed column display mode.
-    // Windows in this column will appear as vertical tabs,
-    // rather than stacked on top of each other.
     Mod+V { toggle-column-tabbed-display; }
 
-    // Actions to switch layouts.
-    // Note: if you uncomment these, make sure you do NOT have
-    // a matching layout switch hotkey configured in xkb options above.
-    // Having both at once on the same hotkey will break the switching,
-    // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
-    // Mod+Space       { switch-layout "next"; }
-    // Mod+Shift+Space { switch-layout "prev"; }
+    Mod+Space       { switch-layout "next"; }
+    Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+Shift+S { screenshot; }
-    Print { screenshot-screen; }
+    Mod+Shift+S { spawn "sh" "-c" "niri msg action screenshot --show-pointer false"; }
+    Print { spawn "sh" "-c" "niri msg action screenshot-screen --show-pointer false"; }
     Alt+Print { screenshot-window; }
 
-    // Applications such as remote-desktop clients and software KVM switches may
-    // request that niri stops processing the keyboard shortcuts defined here
-    // so they may, for example, forward the key presses as-is to a remote machine.
-    // It's a good idea to bind an escape hatch to toggle the inhibitor,
-    // so a buggy application can't hold your session hostage.
-    //
-    // The allow-inhibiting=false property can be applied to other binds as well,
-    // which ensures niri always processes them, even when an inhibitor is active.
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    // The quit action will show a confirmation dialog to avoid accidental exits.
     Ctrl+Alt+Delete { quit; }
 
-    // Powers off the monitors. To turn them back on, do any input like
-    // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
 
