@@ -87,6 +87,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "otd-daemon"
+spawn-at-startup "sh" "-c" "swaybg --image $HOME/Pictures/Wallpapers/omori_blur.png"
 spawn-at-startup "sh" "-c" "swww-daemon"
 spawn-at-startup "sh" "-c" "swww img $HOME/Pictures/Wallpapers/omori.png --transition-type grow --transition-duration 3"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
@@ -169,6 +170,11 @@ layer-rule {
     block-out-from "screencast"
 }
 
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -236,6 +242,8 @@ binds {
     Mod+Page_Up        { focus-workspace-up; }
     Mod+U              { focus-workspace-down; }
     Mod+L              { focus-workspace-up; }
+    Mod+J              { focus-monitor-left; }
+    Mod+Y              { focus-monitor-right; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Mod+Ctrl+N         { move-column-to-workspace-down; }
