@@ -23,7 +23,7 @@ if [ $confirm == "y" ]; then
         : $((countdown--))
     done
     
-    sed -i "s/nishi/$USER/g" config/swaync/config.json
+    sed -i "s/nishi/$USER/g" .config/swaync/config.json
 
     cp -v .config/* -r $HOME/.config
     cp -v Pictures/* -r $HOME/Pictures
