@@ -5,3 +5,4 @@ if ! grep -r systemd /sbin/init; then
     killall -e xdg-desktop-portal*
     /usr/lib*/xdg-desktop-portal-gnome &
     /usr/lib*/xdg-desktop-portal-gtk &
+fi
