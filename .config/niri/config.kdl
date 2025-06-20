@@ -90,6 +90,7 @@ spawn-at-startup "otd-daemon"
 spawn-at-startup "sh" "-c" "swaybg --image $HOME/Pictures/Wallpapers/omori_blur.png"
 spawn-at-startup "sh" "-c" "swww-daemon"
 spawn-at-startup "sh" "-c" "swww img $HOME/Pictures/Wallpapers/omori.png --transition-type grow --transition-duration 3"
+spawn-at-startup "sh" "-c" "/usr/lib*/polkit-mate-authentication-agent-1"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/portals.sh"
 spawn-at-startup "xwayland-satellite"
@@ -183,9 +184,6 @@ binds {
     Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
     Ctrl+Shift+Alt+L { spawn "fcitx5-remote" "-t"; }
 
-    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-" "-e" "-s"; }
-    XF86MonBrightnessUp { spawn "brightnessctl" "set" "5%+" "-e" "-s"; }
-    
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "-l" "1"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
