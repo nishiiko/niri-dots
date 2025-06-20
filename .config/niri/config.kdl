@@ -183,6 +183,9 @@ binds {
     Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
     Ctrl+Shift+Alt+L { spawn "fcitx5-remote" "-t"; }
 
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-" "-e" "-s"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "5%+" "-e" "-s"; }
+    
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "-l" "1"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
