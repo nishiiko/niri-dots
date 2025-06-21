@@ -46,12 +46,22 @@ input {
     focus-follows-mouse max-scroll-amount="100%"
 }
 
-/-output "eDP-1" {
-    // off
-    mode "1920x1080@60"
+output "eDP-1" {
+    mode "1920x1080"
     scale 1
     transform "normal"
     position x=1280 y=0
+}
+
+output "DP-1" {
+    mode "1920x1080@120.000"
+    scale 1
+    focus-at-startup
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@74.973"
+    scale 1
 }
 
 layout {
@@ -102,6 +112,9 @@ environment {
     IMSETTINGS_MODULE "fcitx"
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
+    LIBVA_DRIVER_NAME "nvidia"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    __GL_GSYNC_ALLOWED "1"
     DISPLAY ":1"
 }
 
