@@ -54,13 +54,14 @@ output "eDP-1" {
 }
 
 output "DP-1" {
-    mode "1920x1080@120.000"
+    mode "1920x1080"
     scale 1
     focus-at-startup
+    variable-refresh-rate
 }
 
 output "HDMI-A-1" {
-    mode "1920x1080@74.973"
+    mode "1920x1080"
     scale 1
 }
 
