@@ -300,6 +300,9 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp    { move-workspace-up; }
     Mod+WheelScrollDown             { focus-column-right; }
     Mod+WheelScrollUp               { focus-column-left; }
+    Alt+WheelScrollDown             { focus-window-down; }
+    Alt+WheelScrollUp               { focus-window-up; }
+    
     Mod+Ctrl+WheelScrollUp          { set-column-width "+5%"; }
     Mod+Ctrl+WheelScrollDown        { set-column-width "-5%"; }
     Mod+Alt+WheelScrollUp           { set-window-height "+5%"; }
