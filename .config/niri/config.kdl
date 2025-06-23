@@ -79,8 +79,8 @@ layout {
 
     border {
         width 6
-        active-gradient from="#FDBDFF" to="#9DADFF" angle=135
-        inactive-gradient from="#9D6D9F" to="#3D5D96" angle=135
+        active-gradient from="#FDBDFF" to="#9DADFF" angle=135 relative-to="workspace-view" in="oklab"
+        inactive-gradient from="#9D6D9F" to="#3D5D96" angle=135 relative-to="workspace-view" in="oklab"
         urgent-color "#9b0000"
     }
 
@@ -90,6 +90,12 @@ layout {
         spread 0 
         offset x=10 y=10
         color "#0009"
+    }
+}
+
+gestures {
+    hot-corners {
+        off
     }
 }
 
@@ -113,8 +119,6 @@ environment {
     IMSETTINGS_MODULE "fcitx"
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
-    LIBVA_DRIVER_NAME "nvidia"
-    __GLX_VENDOR_LIBRARY_NAME "nvidia"
     DISPLAY ":1"
 }
 
@@ -270,33 +274,33 @@ binds {
 
     Mod+TouchpadScrollLeft          cooldown-ms=150 { focus-column-right; }
     Mod+TouchpadScrollRight         cooldown-ms=150 { focus-column-left; }
-    Mod+TouchpadScrollDown cooldown-ms=150              { focus-window-up; }
-    Mod+TouchpadScrollUp    cooldown-ms=150          { focus-window-down; }
+    Mod+TouchpadScrollDown          cooldown-ms=150 { focus-window-up; }
+    Mod+TouchpadScrollUp            cooldown-ms=150 { focus-window-down; }
     
-    Mod+Shift+TouchpadScrollLeft          cooldown-ms=150 { move-column-right; }
-    Mod+Shift+TouchpadScrollRight         cooldown-ms=150 { move-column-left; }
-    Mod+Shift+TouchpadScrollDown cooldown-ms=150              { move-window-up; }
-    Mod+Shift+TouchpadScrollUp    cooldown-ms=150          { move-window-down; }
+    Mod+Shift+TouchpadScrollLeft    cooldown-ms=150 { move-column-right; }
+    Mod+Shift+TouchpadScrollRight   cooldown-ms=150 { move-column-left; }
+    Mod+Shift+TouchpadScrollDown    cooldown-ms=150 { move-window-up; }
+    Mod+Shift+TouchpadScrollUp      cooldown-ms=150 { move-window-down; }
 
-    Mod+Alt+TouchpadScrollRight   cooldown-ms=150   { set-column-width "+5%"; }
-    Mod+Alt+TouchpadScrollLeft    cooldown-ms=150   { set-column-width "-5%"; }
-    Mod+Alt+TouchpadScrollUp      { set-window-height "+5%"; }
-    Mod+Alt+TouchpadScrollDown    { set-window-height "-5%"; }
-    Mod+Ctrl+TouchpadScrollDown cooldown-ms=150              { focus-workspace-down; }
-    Mod+Ctrl+TouchpadScrollUp    cooldown-ms=150          { focus-workspace-up; }
+    Mod+Alt+TouchpadScrollRight     cooldown-ms=150 { set-column-width "+5%"; }
+    Mod+Alt+TouchpadScrollLeft      cooldown-ms=150 { set-column-width "-5%"; }
+    Mod+Alt+TouchpadScrollUp                        { set-window-height "+5%"; }
+    Mod+Alt+TouchpadScrollDown                      { set-window-height "-5%"; }
+    Mod+Ctrl+TouchpadScrollDown     cooldown-ms=150 { focus-workspace-down; }
+    Mod+Ctrl+TouchpadScrollUp       cooldown-ms=150 { focus-workspace-up; }
     Mod+Ctrl+Alt+TouchpadScrollDown cooldown-ms=150 { move-workspace-down; }
     Mod+Ctrl+Alt+TouchpadScrollUp   cooldown-ms=150 { move-workspace-up; }
     
-    Mod+Shift+WheelScrollDown   { focus-workspace-down; }
-    Mod+Shift+WheelScrollUp     { focus-workspace-up; }
-    Mod+Ctrl+Shift+WheelScrollDown   { move-workspace-down; }
-    Mod+Ctrl+Shift+WheelScrollUp     { move-workspace-up; }
-    Mod+WheelScrollDown         { focus-column-right; }
-    Mod+WheelScrollUp           { focus-column-left; }
-    Mod+Ctrl+WheelScrollUp      { set-column-width "+5%"; }
-    Mod+Ctrl+WheelScrollDown    { set-column-width "-5%"; }
-    Mod+Alt+WheelScrollUp      { set-window-height "+5%"; }
-    Mod+Alt+WheelScrollDown    { set-window-height "-5%"; }
+    Mod+Shift+WheelScrollDown       { focus-workspace-down; }
+    Mod+Shift+WheelScrollUp         { focus-workspace-up; }
+    Mod+Ctrl+Shift+WheelScrollDown  { move-workspace-down; }
+    Mod+Ctrl+Shift+WheelScrollUp    { move-workspace-up; }
+    Mod+WheelScrollDown             { focus-column-right; }
+    Mod+WheelScrollUp               { focus-column-left; }
+    Mod+Ctrl+WheelScrollUp          { set-column-width "+5%"; }
+    Mod+Ctrl+WheelScrollDown        { set-column-width "-5%"; }
+    Mod+Alt+WheelScrollUp           { set-window-height "+5%"; }
+    Mod+Alt+WheelScrollDown         { set-window-height "-5%"; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -356,6 +360,6 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
-debug {
+debug { 
     wait-for-frame-completion-in-pipewire
 }
