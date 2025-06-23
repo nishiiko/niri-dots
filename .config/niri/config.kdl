@@ -349,8 +349,8 @@ binds {
     Mod+Space       { switch-layout "next"; }
     Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+Shift+S { spawn "sh" "-c" "niri msg action screenshot --show-pointer false"; }
-    Print { spawn "sh" "-c" "niri msg action screenshot-screen --show-pointer false"; }
+    Mod+Shift+S { screenshot show-pointer=false; }
+    Print { screenshot-screen show-pointer=false; }
     Alt+Print { screenshot-window; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
