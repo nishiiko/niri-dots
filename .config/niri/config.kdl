@@ -368,4 +368,5 @@ binds {
 
 debug { 
     wait-for-frame-completion-in-pipewire
+    wait-for-frame-completion-before-queueing
 }
