@@ -105,7 +105,7 @@ spawn-at-startup "swaync"
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "otd-daemon"
 spawn-at-startup "sh" "-c" "swaybg --image $HOME/Pictures/Wallpapers/omori_blur.png"
-spawn-at-startup "sh" "-c" "swww-daemon"
+spawn-at-startup "swww-daemon"
 spawn-at-startup "sh" "-c" "swww img $HOME/Pictures/Wallpapers/omori.png --transition-type grow --transition-duration 3"
 spawn-at-startup "sh" "-c" "/usr/lib*/polkit-mate-authentication-agent-1"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
@@ -119,6 +119,7 @@ environment {
     IMSETTINGS_MODULE "fcitx"
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
+    ELECTRON_PLATFORM_HINT "wayland"
     DISPLAY ":1"
 }
 
@@ -146,9 +147,14 @@ window-rule {
     open-floating true
 }
 
-window-rule {
+/-window-rule {
     match app-id=r#"^discord$"#
     open-maximized true
+    block-out-from "screencast"
+}
+
+window-rule {
+    match app-id=r#"^discord$"#
     block-out-from "screencast"
 }
 
