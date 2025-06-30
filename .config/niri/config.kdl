@@ -119,7 +119,7 @@ environment {
     IMSETTINGS_MODULE "fcitx"
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
-    ELECTRON_PLATFORM_HINT "wayland"
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
     DISPLAY ":1"
 }
 
