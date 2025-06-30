@@ -5,3 +5,4 @@ until pgrep -x swww-daemon; do
 done
 
 swww img $HOME/Pictures/Wallpapers/omori.png --transition-type grow --transition-duration 3
+swaybg --image $HOME/Pictures/Wallpaper/omori_blur.png

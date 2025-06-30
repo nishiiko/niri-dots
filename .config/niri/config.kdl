@@ -17,7 +17,7 @@ input {
         dwt
         // dwtp
         // drag false
-        drag-lock
+        // drag-lock
         natural-scroll
         accel-speed 0.4
         accel-profile "flat"
@@ -104,7 +104,6 @@ spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "otd-daemon"
-spawn-at-startup "sh" "-c" "swaybg --image $HOME/Pictures/Wallpapers/omori_blur.png"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/paper.sh"
 spawn-at-startup "sh" "-c" "/usr/lib*/polkit-mate-authentication-agent-1"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
@@ -211,6 +210,9 @@ binds {
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-" "-e" "-s"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "5%+" "-e" "-s"; }
+
     Mod+K   { spawn "swaync-client" "-t"; }
 
     Mod+O repeat=false { toggle-overview; }
@@ -218,12 +220,12 @@ binds {
     Mod+Q { close-window; }
 
     Mod+Left  { focus-column-left; }
-    Mod+Down  { focus-window-or-workspace-down; }
-    Mod+Up    { focus-window-or-workspace-up; }
+    Mod+Down  { focus-window-down; }
+    Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
     Mod+M     { focus-column-left; }
-    Mod+E     { focus-window-or-workspace-down; }
-    Mod+N     { focus-window-or-workspace-up; }
+    Mod+E     { focus-window-down; }
+    Mod+N     { focus-window-up; }
     Mod+I     { focus-column-right; }
 
     Mod+Shift+Left  { move-column-left; }
@@ -234,9 +236,11 @@ binds {
     Mod+Shift+E     { move-window-down-or-to-workspace-down; }
     Mod+Shift+N     { move-window-up-or-to-workspace-up; }
     Mod+Shift+I     { move-column-right; }
-    
+   
+    Mod+Ctrl+Shift+M    { consume-or-expel-window-left; } 
     Mod+Ctrl+Shift+E    { move-column-to-workspace-down; }
     Mod+Ctrl+Shift+N    { move-column-to-workspace-up; }
+    Mod+Ctrl+Shift+I    { consume-or-expel-window-right; } 
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
@@ -292,26 +296,28 @@ binds {
 
     Mod+Alt+TouchpadScrollRight     cooldown-ms=150 { set-column-width "+5%"; }
     Mod+Alt+TouchpadScrollLeft      cooldown-ms=150 { set-column-width "-5%"; }
-    Mod+Alt+TouchpadScrollUp                        { set-window-height "+5%"; }
-    Mod+Alt+TouchpadScrollDown                      { set-window-height "-5%"; }
+    Mod+Alt+TouchpadScrollUp        cooldown-ms=150 { set-window-height "+5%"; }
+    Mod+Alt+TouchpadScrollDown      cooldown-ms=150 { set-window-height "-5%"; }
     Mod+Ctrl+TouchpadScrollDown     cooldown-ms=150 { focus-workspace-down; }
     Mod+Ctrl+TouchpadScrollUp       cooldown-ms=150 { focus-workspace-up; }
     Mod+Ctrl+Alt+TouchpadScrollDown cooldown-ms=150 { move-workspace-down; }
     Mod+Ctrl+Alt+TouchpadScrollUp   cooldown-ms=150 { move-workspace-up; }
     
-    Mod+Shift+WheelScrollDown       { focus-workspace-down; }
-    Mod+Shift+WheelScrollUp         { focus-workspace-up; }
-    Mod+Ctrl+Shift+WheelScrollDown  { move-workspace-down; }
-    Mod+Ctrl+Shift+WheelScrollUp    { move-workspace-up; }
+    Mod+Ctrl+WheelScrollDown        { focus-workspace-down; }
+    Mod+Ctrl+WheelScrollUp          { focus-workspace-up; }
+    Mod+Ctrl+Alt+WheelScrollDown    { move-workspace-down; }
+    Mod+Ctrl+Alt+WheelScrollUp      { move-workspace-up; }
     Mod+WheelScrollDown             { focus-column-right; }
     Mod+WheelScrollUp               { focus-column-left; }
+    Mod+Shift+WheelScrollDown       { move-column-right; }
+    Mod+Shift+WheelScrollUp         { move-column-left; }
     Alt+WheelScrollDown             { focus-window-down; }
     Alt+WheelScrollUp               { focus-window-up; }
+    Alt+Shift+WheelScrollDown       { move-window-down; }
+    Alt+Shift+WheelScrollUp         { move-window-up; }
     
-    Mod+Ctrl+WheelScrollUp          { set-column-width "+5%"; }
-    Mod+Ctrl+WheelScrollDown        { set-column-width "-5%"; }
-    Mod+Alt+WheelScrollUp           { set-window-height "+5%"; }
-    Mod+Alt+WheelScrollDown         { set-window-height "-5%"; }
+    Mod+Ctrl+Shift+WheelScrollUp { consume-or-expel-window-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { consume-or-expel-window-right; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -331,9 +337,6 @@ binds {
     Mod+Shift+7 { move-column-to-workspace 7; }
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
-
-    Mod+Ctrl+M  { consume-or-expel-window-left; }
-    Mod+Ctrl+I { consume-or-expel-window-right; }
 
     Mod+R { set-window-width "50%"; }
     Mod+Shift+R { reset-window-height; }
