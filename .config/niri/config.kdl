@@ -376,6 +376,10 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
+switch-events {
+    lid-close { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
+}
+
 debug { 
     wait-for-frame-completion-in-pipewire
     wait-for-frame-completion-before-queueing
