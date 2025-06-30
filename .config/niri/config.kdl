@@ -313,10 +313,10 @@ binds {
     Mod+WheelScrollUp               { focus-column-left; }
     Mod+Shift+WheelScrollDown       { move-column-right; }
     Mod+Shift+WheelScrollUp         { move-column-left; }
-    Super+WheelScrollDown             { focus-window-down; }
-    Super+WheelScrollUp               { focus-window-up; }
-    Super+Shift+WheelScrollDown       { move-window-down; }
-    Super+Shift+WheelScrollUp         { move-window-up; }
+    Super+WheelScrollDown             { focus-window-or-workspace-down; }
+    Super+WheelScrollUp               { focus-window-or-workspace-up; }
+    Super+Shift+WheelScrollDown       { move-window-down-or-to-workspace-down; }
+    Super+Shift+WheelScrollUp         { move-window-up-or-to-workspace-up; }
     
     Mod+Ctrl+Shift+WheelScrollUp { consume-or-expel-window-left; }
     Mod+Ctrl+Shift+WheelScrollDown { consume-or-expel-window-right; }
