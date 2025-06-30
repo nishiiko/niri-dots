@@ -4,6 +4,8 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
 input {
+    mod-key "Alt"
+    mod-key-nested "Super"
     keyboard {
         xkb {
             layout "gb(colemak_dh),gb"
@@ -202,8 +204,8 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+S hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
-    Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
-    Ctrl+Shift+Alt+L { spawn "fcitx5-remote" "-t"; }
+    Ctrl+Mod+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
+    Ctrl+Shift+Mod+L { spawn "fcitx5-remote" "-t"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "-l" "1"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
@@ -247,23 +249,23 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Alt+Left  { focus-monitor-left; }
-    Mod+Alt+Down  { focus-monitor-down; }
-    Mod+Alt+Up    { focus-monitor-up; }
-    Mod+Alt+Right { focus-monitor-right; }
-    Mod+Alt+M     { focus-monitor-left; }
-    Mod+Alt+E     { focus-monitor-down; }
-    Mod+Alt+N     { focus-monitor-up; }
-    Mod+Alt+I     { focus-monitor-right; }
+    Mod+Super+Left  { focus-monitor-left; }
+    Mod+Super+Down  { focus-monitor-down; }
+    Mod+Super+Up    { focus-monitor-up; }
+    Mod+Super+Right { focus-monitor-right; }
+    Mod+Super+M     { focus-monitor-left; }
+    Mod+Super+E     { focus-monitor-down; }
+    Mod+Super+N     { focus-monitor-up; }
+    Mod+Super+I     { focus-monitor-right; }
 
-    Mod+Shift+Alt+Left  { move-column-to-monitor-left; }
-    Mod+Shift+Alt+Down  { move-column-to-monitor-down; }
-    Mod+Shift+Alt+Up    { move-column-to-monitor-up; }
-    Mod+Shift+Alt+Right { move-column-to-monitor-right; }
-    Mod+Shift+Alt+M     { move-column-to-monitor-left; }
-    Mod+Shift+Alt+E     { move-column-to-monitor-down; }
-    Mod+Shift+Alt+N     { move-column-to-monitor-up; }
-    Mod+Shift+Alt+I     { move-column-to-monitor-right; }
+    Mod+Shift+Super+Left  { move-column-to-monitor-left; }
+    Mod+Shift+Super+Down  { move-column-to-monitor-down; }
+    Mod+Shift+Super+Up    { move-column-to-monitor-up; }
+    Mod+Shift+Super+Right { move-column-to-monitor-right; }
+    Mod+Shift+Super+M     { move-column-to-monitor-left; }
+    Mod+Shift+Super+E     { move-column-to-monitor-down; }
+    Mod+Shift+Super+N     { move-column-to-monitor-up; }
+    Mod+Shift+Super+I     { move-column-to-monitor-right; }
 
     Mod+Shift+J         { move-workspace-to-monitor-left; }
     Mod+Shift+Y         { move-workspace-to-monitor-right; }
@@ -294,27 +296,27 @@ binds {
     Mod+Shift+TouchpadScrollDown    cooldown-ms=150 { move-window-up; }
     Mod+Shift+TouchpadScrollUp      cooldown-ms=150 { move-window-down; }
 
-    Mod+Alt+TouchpadScrollRight     cooldown-ms=150 { set-column-width "+5%"; }
-    Mod+Alt+TouchpadScrollLeft      cooldown-ms=150 { set-column-width "-5%"; }
-    Mod+Alt+TouchpadScrollUp        cooldown-ms=150 { set-window-height "+5%"; }
-    Mod+Alt+TouchpadScrollDown      cooldown-ms=150 { set-window-height "-5%"; }
+    Mod+Super+TouchpadScrollRight     cooldown-ms=150 { set-column-width "+5%"; }
+    Mod+Super+TouchpadScrollLeft      cooldown-ms=150 { set-column-width "-5%"; }
+    Mod+Super+TouchpadScrollUp        cooldown-ms=150 { set-window-height "+5%"; }
+    Mod+Super+TouchpadScrollDown      cooldown-ms=150 { set-window-height "-5%"; }
     Mod+Ctrl+TouchpadScrollDown     cooldown-ms=150 { focus-workspace-down; }
     Mod+Ctrl+TouchpadScrollUp       cooldown-ms=150 { focus-workspace-up; }
-    Mod+Ctrl+Alt+TouchpadScrollDown cooldown-ms=150 { move-workspace-down; }
-    Mod+Ctrl+Alt+TouchpadScrollUp   cooldown-ms=150 { move-workspace-up; }
+    Mod+Ctrl+Super+TouchpadScrollDown cooldown-ms=150 { move-workspace-down; }
+    Mod+Ctrl+Super+TouchpadScrollUp   cooldown-ms=150 { move-workspace-up; }
     
     Mod+Ctrl+WheelScrollDown        { focus-workspace-down; }
     Mod+Ctrl+WheelScrollUp          { focus-workspace-up; }
-    Mod+Ctrl+Alt+WheelScrollDown    { move-workspace-down; }
-    Mod+Ctrl+Alt+WheelScrollUp      { move-workspace-up; }
+    Mod+Ctrl+Super+WheelScrollDown    { move-workspace-down; }
+    Mod+Ctrl+Super+WheelScrollUp      { move-workspace-up; }
     Mod+WheelScrollDown             { focus-column-right; }
     Mod+WheelScrollUp               { focus-column-left; }
     Mod+Shift+WheelScrollDown       { move-column-right; }
     Mod+Shift+WheelScrollUp         { move-column-left; }
-    Alt+WheelScrollDown             { focus-window-down; }
-    Alt+WheelScrollUp               { focus-window-up; }
-    Alt+Shift+WheelScrollDown       { move-window-down; }
-    Alt+Shift+WheelScrollUp         { move-window-up; }
+    Super+WheelScrollDown             { focus-window-down; }
+    Super+WheelScrollUp               { focus-window-up; }
+    Super+Shift+WheelScrollDown       { move-window-down; }
+    Super+Shift+WheelScrollUp         { move-window-up; }
     
     Mod+Ctrl+Shift+WheelScrollUp { consume-or-expel-window-left; }
     Mod+Ctrl+Shift+WheelScrollDown { consume-or-expel-window-right; }
@@ -365,11 +367,11 @@ binds {
 
     Mod+Shift+S { screenshot show-pointer=false; }
     Print { screenshot-screen show-pointer=false; }
-    Alt+Print { screenshot-window; }
+    Mod+Print { screenshot-window; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Ctrl+Alt+Delete { quit; }
+    Ctrl+Super+Delete { quit; }
 
     Mod+Shift+P { power-off-monitors; }
 }
