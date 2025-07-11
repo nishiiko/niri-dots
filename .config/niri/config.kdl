@@ -224,8 +224,8 @@ binds {
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
     Mod+M     { focus-column-left; }
-    Mod+E     { focus-window-down; }
-    Mod+N     { focus-window-up; }
+    Mod+E     { focus-window-or-workspace-down; }
+    Mod+N     { focus-window-or-workspace-up; }
     Mod+I     { focus-column-right; }
 
     Mod+Shift+Left  { move-column-left; }
