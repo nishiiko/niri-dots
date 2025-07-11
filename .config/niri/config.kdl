@@ -80,7 +80,9 @@ layout {
 
     tab-indicator {
         width 6
-        position "bottom"
+        length total-proportion=0.7
+        active-color "#EE88FF"
+        inactive-color "#6D5D96"
     }
 
     border {
