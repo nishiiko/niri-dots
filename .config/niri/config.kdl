@@ -7,7 +7,7 @@ input {
     keyboard {
         xkb {
             layout "gb(colemak_dh),gb"
-            options "ctrl:nocaps"
+            options "caps:ctrl_shifted_capslock"
         }
         numlock
     }
@@ -73,8 +73,14 @@ layout {
         proportion 0.5
     }
     default-column-width { proportion 0.5; }
+
     focus-ring {
         off
+    }
+
+    tab-indicator {
+        width 6
+        position "bottom"
     }
 
     border {
