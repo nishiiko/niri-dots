@@ -99,6 +99,7 @@ layout {
         spread 0 
         offset x=10 y=10
         color "#0009"
+        inactive-color "#0009"
     }
 }
 
