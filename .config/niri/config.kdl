@@ -123,7 +123,6 @@ spawn-at-startup "xwayland-satellite"
 environment {
     GLFW_IM_MODULE "fcitx"
     INPUT_METHOD "fcitx"
-    XMODIFIERS "@im=fcitx"
     IMSETTINGS_MODULE "fcitx"
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
