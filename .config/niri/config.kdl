@@ -146,7 +146,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    slowdown 1.5
+    // slowdown 1.5
 }
 
 window-rule {
@@ -178,6 +178,7 @@ window-rule {
     match title=r#"^Steam\ Settings$"# app-id=r#"^steam$"#
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"^org\.twosheds\.iwgtk$"#
+    match app-id=r#"^org.gnome.Nautilus$"#
     match app-id=r#"^iwgtk$"#
     match app-id=r#"^Blueman-manager$"#
     match app-id=r#"^piper$"#
