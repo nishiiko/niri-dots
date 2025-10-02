@@ -322,7 +322,7 @@ binds {
     Mod+Shift+1 { move-column-to-workspace-up focus=false; }
     Mod+Shift+2 { move-column-to-workspace-down focus=false; }
 
-    Mod+P       { set-window-width "50%"; }
+    Mod+P       { set-window-width "66%"; }
     Mod+Shift+P { reset-window-height; }
     Mod+F       { maximize-column; }
     Mod+Return  { fullscreen-window; }
