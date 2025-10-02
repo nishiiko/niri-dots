@@ -149,6 +149,11 @@ animations {
 }
 
 window-rule {
+    match is-floating=true
+    baba-is-float true
+}
+
+window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
@@ -314,8 +319,8 @@ binds {
 
     Mod+1       { focus-workspace-up; }
     Mod+2       { focus-workspace-down; }
-    Mod+Shift+1 { move-window-up-or-to-workspace-up; }
-    Mod+Shift+2 { move-window-down-or-to-workspace-down; }
+    Mod+Shift+1 { move-column-to-workspace-up focus=false; }
+    Mod+Shift+2 { move-column-to-workspace-down focus=false; }
 
     Mod+P       { set-window-width "50%"; }
     Mod+Shift+P { reset-window-height; }
