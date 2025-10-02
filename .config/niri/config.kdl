@@ -21,7 +21,7 @@ input {
         natural-scroll
         accel-speed 0.4
         accel-profile "flat"
-        scroll-factor 0.1
+        scroll-factor 0.5
         // scroll-method "two-finger"
         disabled-on-external-mouse
     }
@@ -38,12 +38,12 @@ input {
         // off
         // natural-scroll
         // accel-speed 0.2
-        // accel-profile "flat"
+        accel-profile "flat"
         // scroll-method "on-button-down"
         // scroll-button 273
         // middle-emulation
     }
-    focus-follows-mouse max-scroll-amount="100%"
+    focus-follows-mouse
 }
 
 output "eDP-1" {
@@ -127,7 +127,6 @@ environment {
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
-    DISPLAY ":1"
 }
 
 cursor {
@@ -297,25 +296,6 @@ binds {
     Mod+Shift+U         { move-workspace-down; }
     Mod+Shift+L         { move-workspace-up; }
 
-    Mod+TouchpadScrollLeft          cooldown-ms=150 { focus-column-right; }
-    Mod+TouchpadScrollRight         cooldown-ms=150 { focus-column-left; }
-    Mod+TouchpadScrollDown          cooldown-ms=150 { focus-window-up; }
-    Mod+TouchpadScrollUp            cooldown-ms=150 { focus-window-down; }
-    
-    Mod+Shift+TouchpadScrollLeft    cooldown-ms=150 { move-column-right; }
-    Mod+Shift+TouchpadScrollRight   cooldown-ms=150 { move-column-left; }
-    Mod+Shift+TouchpadScrollDown    cooldown-ms=150 { move-window-up; }
-    Mod+Shift+TouchpadScrollUp      cooldown-ms=150 { move-window-down; }
-
-    Mod+Alt+TouchpadScrollRight     cooldown-ms=150 { set-column-width "+5%"; }
-    Mod+Alt+TouchpadScrollLeft      cooldown-ms=150 { set-column-width "-5%"; }
-    Mod+Alt+TouchpadScrollUp        cooldown-ms=150 { set-window-height "+5%"; }
-    Mod+Alt+TouchpadScrollDown      cooldown-ms=150 { set-window-height "-5%"; }
-    Mod+Ctrl+TouchpadScrollDown     cooldown-ms=150 { focus-workspace-down; }
-    Mod+Ctrl+TouchpadScrollUp       cooldown-ms=150 { focus-workspace-up; }
-    Mod+Ctrl+Alt+TouchpadScrollDown cooldown-ms=150 { move-workspace-down; }
-    Mod+Ctrl+Alt+TouchpadScrollUp   cooldown-ms=150 { move-workspace-up; }
-    
     Mod+Ctrl+WheelScrollDown        { focus-workspace-down; }
     Mod+Ctrl+WheelScrollUp          { focus-workspace-up; }
     Mod+Ctrl+Alt+WheelScrollDown    { move-workspace-down; }
@@ -389,8 +369,4 @@ binds {
 
 switch-events {
     lid-close { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
-}
-
-debug { 
-    wait-for-frame-completion-in-pipewire
 }
