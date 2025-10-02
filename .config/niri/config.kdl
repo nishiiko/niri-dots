@@ -124,6 +124,7 @@ environment {
     GLFW_IM_MODULE "fcitx"
     INPUT_METHOD "fcitx"
     IMSETTINGS_MODULE "fcitx"
+    GTK_IM_MODULE ""
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
