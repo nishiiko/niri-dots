@@ -316,10 +316,10 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp    { consume-or-expel-window-left; }
     Mod+Ctrl+Shift+WheelScrollDown  { consume-or-expel-window-right; }
 
-    Mod+1       { focus-workspace-up; }
-    Mod+2       { focus-workspace-down; }
-    Mod+Shift+1 { move-column-to-workspace-up focus=false; }
-    Mod+Shift+2 { move-column-to-workspace-down focus=false; }
+    Mod+2       { focus-workspace-up; }
+    Mod+3       { focus-workspace-down; }
+    Mod+Shift+2 { move-column-to-workspace-up focus=false; }
+    Mod+Shift+3 { move-column-to-workspace-down focus=false; }
 
     Mod+P       { set-window-width "50%"; }
     Mod+Shift+P { reset-window-height; }
