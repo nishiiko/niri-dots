@@ -111,6 +111,7 @@ gestures {
 spawn-at-startup "dbus-update-activation-environment" "--all"
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
+spawn-at-startup "iwgtk" "--gapplication-service"
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "otd-daemon"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/paper.sh"
@@ -153,11 +154,6 @@ window-rule {
     baba-is-float true
 }
 
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
 /-window-rule {
     match app-id=r#"^discord$"#
     open-maximized true
@@ -178,10 +174,12 @@ window-rule {
 // niri doesnt support look around 😭
 window-rule {
     match title=r#"^([^S]|S([^t]|$)|St([^e]|$)|Ste([^a]|$)|Stea([^m]|$)).*$"# app-id=r#"^steam$"#
-    match title=r#"^Steam Settings$"# app-id=r#"^steam$"#
+    match title=r#"^Steam\ Settings$"# app-id=r#"^steam$"#
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"^org\.twosheds\.iwgtk$"#
     match app-id=r#"^iwgtk$"#
     match app-id=r#"^Blueman-manager$"#
+    match app-id=r#"^piper$"#
     open-floating true
 }
 
