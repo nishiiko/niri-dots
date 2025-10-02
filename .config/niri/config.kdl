@@ -43,7 +43,6 @@ input {
         // scroll-button 273
         // middle-emulation
     }
-    focus-follows-mouse
 }
 
 output "eDP-1" {
@@ -145,11 +144,12 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    slowdown 1.5
 }
 
 window-rule {
     match is-floating=true
+    exclude app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
     baba-is-float true
 }
 
@@ -322,7 +322,7 @@ binds {
     Mod+Shift+1 { move-column-to-workspace-up focus=false; }
     Mod+Shift+2 { move-column-to-workspace-down focus=false; }
 
-    Mod+P       { set-window-width "66%"; }
+    Mod+P       { set-window-width "50%"; }
     Mod+Shift+P { reset-window-height; }
     Mod+F       { maximize-column; }
     Mod+Return  { fullscreen-window; }
