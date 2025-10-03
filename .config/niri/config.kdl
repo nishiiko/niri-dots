@@ -364,3 +364,7 @@ binds {
 switch-events {
     lid-close { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
 }
+
+debug {
+    deactivate-unfocused-windows
+}
