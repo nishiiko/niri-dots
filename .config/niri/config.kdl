@@ -123,7 +123,7 @@ spawn-at-startup "mullvad" "connect"
 spawn-at-startup "xwayland-satellite"
 
 environment {
-    GTK_IM_MODULE ""
+    GTK_IM_MODULE null
     XMODIFIERS "@im=fcitx"
     GLFW_IM_MODULE "fcitx"
     INPUT_METHOD "fcitx"
