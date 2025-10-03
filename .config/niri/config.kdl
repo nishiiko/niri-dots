@@ -71,6 +71,8 @@ layout {
     
     preset-column-widths {
         proportion 0.5
+        proportion 0.66
+        proportion 0.75
     }
     default-column-width { proportion 0.5; }
 
@@ -158,12 +160,6 @@ window-rule {
     baba-is-float true
 }
 
-/-window-rule {
-    match app-id=r#"^discord$"#
-    open-maximized true
-    block-out-from "screencast"
-}
-
 window-rule {
     match app-id=r#"^discord$"#
     block-out-from "screencast"
@@ -172,7 +168,10 @@ window-rule {
 window-rule {
     match title=r#"^Steam$"# app-id=r#"^steam$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
-    open-maximized true
+    match app-id=r#"^firefox-bin$"#
+    match app-id=r#"^ONLYOFFICE$"#
+    match app-id=r#"^discord$"#
+    default-column-width { proportion 0.75; }
 }
 
 // niri doesnt support look around 😭
@@ -180,11 +179,11 @@ window-rule {
     match title=r#"^([^S]|S([^t]|$)|St([^e]|$)|Ste([^a]|$)|Stea([^m]|$)).*$"# app-id=r#"^steam$"#
     match title=r#"^Steam\ Settings$"# app-id=r#"^steam$"#
     match app-id=r#"^org.pulseaudio.pavucontrol$"#
-    match app-id=r#"^firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"^firefox-bin$"# title="^Picture-in-Picture$"
     match app-id=r#"^org\.twosheds\.iwgtk$"#
     match app-id=r#"^org.gnome.Nautilus$"#
-    match app-id=r#"^iwgtk$"#
     match app-id=r#"^Blueman-manager$"#
+    match app-id=r#"^iwgtk$"#
     match app-id=r#"^piper$"#
     open-floating true
 }
@@ -326,7 +325,7 @@ binds {
     Mod+Shift+1 { move-column-to-workspace-up focus=false; }
     Mod+Shift+2 { move-column-to-workspace-down focus=false; }
 
-    Mod+P       { set-window-width "50%"; }
+    Mod+P       { switch-preset-column-width; }
     Mod+Shift+P { reset-window-height; }
     Mod+F       { maximize-column; }
     Mod+Return  { fullscreen-window; }
