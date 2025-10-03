@@ -123,10 +123,11 @@ spawn-at-startup "mullvad" "connect"
 spawn-at-startup "xwayland-satellite"
 
 environment {
+    GTK_IM_MODULE ""
+    XMODIFIERS "@im=fcitx"
     GLFW_IM_MODULE "fcitx"
     INPUT_METHOD "fcitx"
     IMSETTINGS_MODULE "fcitx"
-    GTK_IM_MODULE ""
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
@@ -148,7 +149,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 1.5
+    slowdown 1.5
 }
 
 window-rule {
