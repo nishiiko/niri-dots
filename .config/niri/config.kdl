@@ -124,6 +124,7 @@ spawn-at-startup "mullvad" "connect"
 spawn-at-startup "xwayland-satellite"
 
 environment {
+    __GL_SYNC_TO_VBLANK "0"
     GTK_IM_MODULE null
     XMODIFIERS "@im=fcitx"
     GLFW_IM_MODULE "fcitx"
