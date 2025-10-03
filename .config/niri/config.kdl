@@ -179,6 +179,7 @@ window-rule {
 window-rule {
     match title=r#"^([^S]|S([^t]|$)|St([^e]|$)|Ste([^a]|$)|Stea([^m]|$)).*$"# app-id=r#"^steam$"#
     match title=r#"^Steam\ Settings$"# app-id=r#"^steam$"#
+    match app-id=r#"^org.pulseaudio.pavucontrol$"#
     match app-id=r#"^firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"^org\.twosheds\.iwgtk$"#
     match app-id=r#"^org.gnome.Nautilus$"#
