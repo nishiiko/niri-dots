@@ -183,6 +183,7 @@ window-rule {
     match app-id=r#"^org\.twosheds\.iwgtk$"#
     match app-id=r#"^org.gnome.Nautilus$"#
     match app-id=r#"^Blueman-manager$"#
+    match app-id=r#"^osu\!.exe$"#
     match app-id=r#"^iwgtk$"#
     match app-id=r#"^piper$"#
     open-floating true
@@ -219,7 +220,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+S hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
     Ctrl+Mod+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
-    Ctrl+Shift+Mod+L { spawn "fcitx5-remote" "-t"; }
+    Ctrl+Shift+Alt+L { spawn "fcitx5-remote" "-t"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "-l" "1"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
