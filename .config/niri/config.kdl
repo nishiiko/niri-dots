@@ -120,11 +120,11 @@ spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/paper.sh"
 spawn-at-startup "sh" "-c" "/usr/lib*/polkit-mate-authentication-agent-1"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/portals.sh"
-spawn-at-startup "mullvad" "connect"
 spawn-at-startup "xwayland-satellite"
 
 environment {
-    __GL_SYNC_TO_VBLANK "0"
+    vblank_mode "0"
+    GTK_THEME "Orchis-Purple-Dark"
     GTK_IM_MODULE null
     XMODIFIERS "@im=fcitx"
     GLFW_IM_MODULE "fcitx"
