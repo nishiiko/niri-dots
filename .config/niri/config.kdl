@@ -68,7 +68,8 @@ output "HDMI-A-1" {
 layout {
     gaps 16
     center-focused-column "never"
-    
+    empty-workspace-above-first
+
     preset-column-widths {
         proportion 0.5
         proportion 0.75
@@ -110,31 +111,30 @@ gestures {
     }
 }
 
-spawn-at-startup "dbus-update-activation-environment" "--all"
-spawn-at-startup "waybar"
-spawn-at-startup "swaync"
-spawn-at-startup "iwgtk" "--gapplication-service"
-spawn-at-startup "fcitx5" "-d"
-spawn-at-startup "otd-daemon"
-spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/paper.sh"
 spawn-at-startup "sh" "-c" "/usr/lib*/polkit-mate-authentication-agent-1"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/portals.sh"
+spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/paper.sh"
+spawn-at-startup "dbus-update-activation-environment" "--all"
+spawn-at-startup "iwgtk" "--gapplication-service"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "fcitx5" "-d"
+spawn-at-startup "otd-daemon"
+spawn-at-startup "swaync"
+spawn-at-startup "waybar"
 
 environment {
-    vblank_mode "0"
-    __GL_SYNC_TO_VBLANK "0"
-    GTK_THEME "Orchis-Purple-Dark"
-    QT_QPA_PLATFORMTHEME "gtk3"
-    GTK_IM_MODULE null
-    XMODIFIERS "@im=fcitx"
-    GLFW_IM_MODULE "fcitx"
-    INPUT_METHOD "fcitx"
-    IMSETTINGS_MODULE "fcitx"
-    QT_IM_MODULE "fcitx"
-    SDL_IM_MODULE "fcitx"
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
+    __GL_SYNC_TO_VBLANK "0"
+    IMSETTINGS_MODULE "fcitx"
+    GLFW_IM_MODULE "fcitx"
+    SDL_IM_MODULE "fcitx"
+    GTK_IM_MODULE null
+    QT_IM_MODULE "fcitx"
+    INPUT_METHOD "fcitx"
+    vblank_mode "0"
+    XMODIFIERS "@im=fcitx"
+    GTK_THEME "Orchis-Purple-Dark"
 }
 
 cursor {
@@ -168,9 +168,9 @@ window-rule {
 }
 
 window-rule {
-    match title=r#"^Steam$"# app-id=r#"^steam$"#
+    match app-id=r#"^firefox-bin$"# title=r#"^Mozilla\ Firefox$"#
+    match app-id=r#"^steam$"# title=r#"^Steam$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
-    match app-id=r#"^firefox-bin$"#
     match app-id=r#"^ONLYOFFICE$"#
     match app-id=r#"^discord$"#
     default-column-width { proportion 0.75; }
@@ -178,7 +178,7 @@ window-rule {
 
 // niri doesnt support look around 😭
 window-rule {
-    match title=r#"^([^S]|S([^t]|$)|St([^e]|$)|Ste([^a]|$)|Stea([^m]|$)).*$"# app-id=r#"^steam$"#
+    match app-id=r#"^steam$"# title=r#"^([^S]|S([^t]|$)|St([^e]|$)|Ste([^a]|$)|Stea([^m]|$)).*$"#
     match app-id=r#"^firefox-bin$"# title="^Picture-in-Picture$"
     match app-id=r#"^steam$"# title=r#"^Steam\ Settings$"#
     match app-id=r#"^MuseScore4$"# title="^MuseScore4$"
