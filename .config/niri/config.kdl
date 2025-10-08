@@ -124,7 +124,9 @@ spawn-at-startup "xwayland-satellite"
 
 environment {
     vblank_mode "0"
+    __GL_SYNC_TO_VBLANK "0"
     GTK_THEME "Orchis-Purple-Dark"
+    QT_QPA_PLATFORMTHEME "gtk3"
     GTK_IM_MODULE null
     XMODIFIERS "@im=fcitx"
     GLFW_IM_MODULE "fcitx"
