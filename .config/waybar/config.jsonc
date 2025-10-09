@@ -115,8 +115,7 @@
         "format-linked": "{ifname} (No IP)  ",
         "format-disconnected": "  Disconnected",
         "on-click": "killall iwgtk;iwgtk",
-        "tooltip-format": "{essid}",
-        "interval": 1
+        "tooltip-format": "{essid}"
     },
     
     "custom/vpn": {
