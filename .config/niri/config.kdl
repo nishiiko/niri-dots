@@ -112,7 +112,6 @@ gestures {
 }
 
 spawn-at-startup "sh" "-c" "/usr/lib*/polkit-mate-authentication-agent-1"
-spawn-at-startup "sh" "-c" "$HOME/.config/waybar/scripts/vpn-watch.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/portals.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/paper.sh"

@@ -14,4 +14,4 @@
 #     wireplumber &
 # fi
 
-paplay --volume=65535 $HOME/.config/sway/extra/assets/heal.wav &
+paplay --volume=65535 $HOME/.config/niri/scripts/assets/heal.wav &
