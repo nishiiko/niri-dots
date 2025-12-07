@@ -1,0 +1,22 @@
+[general]
+import = ["~/.config/alacritty/colours.toml"]
+
+[window]
+opacity = 1.0
+padding = { x = 10, y = 10 } 
+decorations = "None"
+
+[font]
+normal = { family = "Maple Mono NL NF CN", style = "bold" }
+size = 14
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor]
+style = { shape = "underline", blinking = "always" }
+vi_mode_style = { shape = "underline", blinking = "always" }
+
+unfocused_hollow = false
+blink_timeout = 0
+thickness = 0.3
