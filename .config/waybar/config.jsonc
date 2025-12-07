@@ -113,8 +113,8 @@
         "format-wifi": " ",
         "format-ethernet": " ",
         "format-linked": " ",
-        "format-disconnected": "  Disconnected",
-        "on-click": "killall iwgtk;iwgtk",
+        "format-disconnected": " ",
+        "on-click": "pkill iwgtk;iwgtk",
         "tooltip-format": "{essid}",
         "interval": 1
     },
@@ -144,6 +144,6 @@
             "car": " ",
             "default": [" ", " ", " "]
         },
-        "on-click": "killall pavucontrol ; pavucontrol"
+        "on-click": "pkill pavucontrol ; pavucontrol"
     }
 }
