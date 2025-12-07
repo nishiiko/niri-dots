@@ -8,7 +8,7 @@ input {
     keyboard {
         xkb {
             layout "gb(colemak_dh),gb"
-            options "caps:ctrl_shifted_capslock"
+            options "caps:ctrl_shifted_capslock,altwin:swap_lalt_lwin"
         }
         numlock
     }
@@ -50,7 +50,7 @@ output "eDP-1" {
     mode "1920x1080"
     scale 1
     transform "normal"
-    position x=1280 y=0
+    position x=0 y=0
 }
 
 output "DP-1" {
@@ -68,11 +68,11 @@ output "HDMI-A-1" {
 layout {
     gaps 16
     center-focused-column "never"
-    empty-workspace-above-first
 
     preset-column-widths {
         proportion 0.5
         proportion 0.75
+        proportion 1.0
     }
     default-column-width { proportion 0.5; }
 
@@ -100,8 +100,8 @@ layout {
         softness 5
         spread 0 
         offset x=10 y=10
-        color "#0009"
-        inactive-color "#0009"
+        color "#1A1A1ABB"
+        inactive-color "#1A1A1ABB"
     }
 }
 
@@ -111,28 +111,27 @@ gestures {
     }
 }
 
-spawn-at-startup "sh" "-c" "/usr/lib*/polkit-mate-authentication-agent-1"
+spawn-at-startup "sh" "-c" "$HOME/.config/waybar/scripts/vpn-watch.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/pipewire.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/portals.sh"
 spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/paper.sh"
+spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 spawn-at-startup "dbus-update-activation-environment" "--all"
 spawn-at-startup "iwgtk" "--gapplication-service"
-spawn-at-startup "xwayland-satellite"
-spawn-at-startup "fcitx5" "-d"
-spawn-at-startup "otd-daemon"
+spawn-at-startup "blueman-applet"
+spawn-at-startup "fcitx5"
 spawn-at-startup "swaync"
 spawn-at-startup "waybar"
 
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
-    __GL_SYNC_TO_VBLANK "0"
+    QT_QPA_PLATFORMTHEME "gtk3"
     IMSETTINGS_MODULE "fcitx"
     GLFW_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
     GTK_IM_MODULE null
     QT_IM_MODULE "fcitx"
     INPUT_METHOD "fcitx"
-    vblank_mode "0"
     XMODIFIERS "@im=fcitx"
     GTK_THEME "Orchis-Purple-Dark"
 }
@@ -158,7 +157,7 @@ animations {
 
 window-rule {
     match is-floating=true
-    exclude app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    exclude app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
     baba-is-float true
 }
 
@@ -168,27 +167,27 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^firefox-bin$"# title=r#"^Mozilla\ Firefox$"#
+    match app-id=r#"^Firefox$"# title=r#"^Mozilla\ Firefox$"#
     match app-id=r#"^steam$"# title=r#"^Steam$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
-    match app-id=r#"^ONLYOFFICE$"#
     match app-id=r#"^discord$"#
     default-column-width { proportion 0.75; }
 }
 
-// niri doesnt support look around 😭
+// niri doesnt support look around 😭 dont judge my steam regex
 window-rule {
-    match app-id=r#"^steam$"# title=r#"^([^S]|S([^t]|$)|St([^e]|$)|Ste([^a]|$)|Stea([^m]|$)).*$"#
-    match app-id=r#"^firefox-bin$"# title="^Picture-in-Picture$"
-    match app-id=r#"^steam$"# title=r#"^Steam\ Settings$"#
+    match app-id=r#"^steam$"# title=r#"^([^S]|S([^t]|$)|St([^e]|$)|Ste([^a]|$)|Stea([^m]|$)).*|Steam.+$"#
+    match app-id=r#"^Firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"^MuseScore4$"# title="^MuseScore4$"
+    match app-id=r#"^org.fcitx.fcitx5-config-qt$"#
     match app-id=r#"^org.pulseaudio.pavucontrol$"#
     match app-id=r#"^org\.twosheds\.iwgtk$"#
     match app-id=r#"^org.gnome.Nautilus$"#
     match app-id=r#"^blueman-manager$"#
-    match app-id=r#"^osu\!.exe$"#
+    match app-id=r#"^nwg-look$"#
     match app-id=r#"^iwgtk$"#
     match app-id=r#"^piper$"#
+    match title=r#"^Open"#
     open-floating true
 }
 
@@ -220,7 +219,7 @@ layer-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+S hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
     Ctrl+Mod+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
     Ctrl+Shift+Alt+L { spawn "fcitx5-remote" "-t"; }
@@ -230,8 +229,8 @@ binds {
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-" "-e" "-s"; }
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "5%+" "-e" "-s"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "2%-" "-e" "-s"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "2%+" "-e" "-s"; }
 
     Mod+K   { spawn "swaync-client" "-t"; }
 
@@ -324,10 +323,14 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp    { consume-or-expel-window-left; }
     Mod+Ctrl+Shift+WheelScrollDown  { consume-or-expel-window-right; }
 
-    Mod+1       { focus-workspace-up; }
-    Mod+2       { focus-workspace-down; }
-    Mod+Shift+1 { move-column-to-workspace-up focus=false; }
-    Mod+Shift+2 { move-column-to-workspace-down focus=false; }
+    Mod+1       { focus-column-left; }
+    Mod+2       { focus-window-or-workspace-up; }
+    Mod+3       { focus-window-or-workspace-down; }
+    Mod+4       { focus-column-right; }
+    Mod+Shift+1 { move-column-left; }
+    Mod+Shift+2 { move-column-to-workspace-up focus=false; }
+    Mod+Shift+3 { move-column-to-workspace-down focus=false; }
+    Mod+Shift+4 { move-column-right; }
 
     Mod+P       { switch-preset-column-width; }
     Mod+Shift+P { reset-window-height; }
@@ -367,8 +370,4 @@ binds {
 
 switch-events {
     lid-close { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
-}
-
-debug {
-    deactivate-unfocused-windows
 }

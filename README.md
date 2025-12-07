@@ -8,7 +8,7 @@ niri (duh)\
 swww\
 swaybg (yea you need both cause i use swaybg for the overview wallpaper)\
 swaync\
-foot\
+alacritty\
 rofi\
 hyprlock\
 waybar\
