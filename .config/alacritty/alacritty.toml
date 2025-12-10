@@ -7,7 +7,7 @@ padding = { x = 10, y = 10 }
 decorations = "None"
 
 [font]
-normal = { family = "Maple Mono NL NF CN", style = "bold" }
+normal = { family = "Maple Mono NF CN", style = "bold" }
 size = 15
 
 [colors]

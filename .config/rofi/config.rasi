@@ -1,6 +1,6 @@
 configuration {
 	drun-display-format: "{name}";
-	font: "Ubuntu Mono 20";
+	font: "MapleMono NF CN 20";
 	modi: "drun,run,emoji";
 
 	sort: true;
