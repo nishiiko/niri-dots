@@ -69,7 +69,7 @@ layout {
 
     preset-column-widths {
         proportion 0.5
-        proportion 0.75
+        proportion 0.66
         proportion 1.0
     }
     default-column-width { proportion 0.5; }
@@ -169,7 +169,7 @@ window-rule {
     match app-id=r#"^steam$"# title=r#"^Steam$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
     match app-id=r#"^discord$"#
-    default-column-width { proportion 0.75; }
+    default-column-width { proportion 0.66; }
 }
 
 window-rule {
@@ -201,10 +201,6 @@ window-rule {
 
 layer-rule {
     match namespace="^swaync-notification-window$"
-    block-out-from "screencast"
-}
-
-layer-rule {
     match namespace="^swaync-control-center$"
     block-out-from "screencast"
 }
@@ -335,7 +331,7 @@ binds {
     Mod+F       { maximize-column; }
     Mod+Return  { fullscreen-window; }
 
-    Mod+Ctrl+F  { expand-column-to-available-width; }
+    Mod+Shift+F  { expand-column-to-available-width; }
 
     Mod+C       { center-column; }
 
