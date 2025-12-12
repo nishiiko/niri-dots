@@ -4,6 +4,7 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
 input {
+    warp-mouse-to-focus
     focus-follows-mouse
     keyboard {
         xkb {
@@ -117,6 +118,7 @@ spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 spawn-at-startup "dbus-update-activation-environment" "--all"
 spawn-at-startup "iwgtk" "--gapplication-service"
 spawn-at-startup "blueman-applet"
+spawn-at-startup "wlsunset" "-t" "4750"
 spawn-at-startup "fcitx5"
 spawn-at-startup "swaync"
 spawn-at-startup "waybar"
@@ -153,6 +155,12 @@ animations {
     slowdown 1.5
 }
 
+// Fix OBS with server-side decorations missing a minimum width.
+window-rule {
+    match app-id=r#"^com\.obsproject\.Studio$"#
+    min-width 876
+}
+
 window-rule {
     match is-floating=true
     exclude app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
@@ -168,24 +176,27 @@ window-rule {
     match app-id=r#"^Firefox$"# title=r#"^Mozilla\ Firefox$"#
     match app-id=r#"^steam$"# title=r#"^Steam$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
+    match app-id=r#"^Spotify$"#
     match app-id=r#"^discord$"#
     default-column-width { proportion 0.66; }
 }
 
 window-rule {
-    match app-id=r#"^steam$"#
-    exclude title=r#"^Steam$"#
     match app-id=r#"^Firefox$"# title="^Picture-in-Picture$"
-    match app-id=r#"^MuseScore4$"# title="^MuseScore4$"
     match app-id=r#"^org.fcitx.fcitx5-config-qt$"#
     match app-id=r#"^org.pulseaudio.pavucontrol$"#
     match app-id=r#"^org\.twosheds\.iwgtk$"#
     match app-id=r#"^org.gnome.Nautilus$"#
     match app-id=r#"^blueman-manager$"#
+    match app-id=r#"^MuseScore4$"#
     match app-id=r#"^nwg-look$"#
+    match app-id=r#"^steam$"#
     match app-id=r#"^iwgtk$"#
     match app-id=r#"^piper$"#
     match title=r#"^Open"#
+    
+    exclude app-id=r#"^MuseScore4$"# title=r#"^MuseScore Studio$"#
+    exclude app-id=r#"^steam$"# title=r#"^Steam$"#
     open-floating true
 }
 

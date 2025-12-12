@@ -121,6 +121,7 @@
     
     "custom/vpn": {
         "format": "{icon} {text} ",
+        "on-click": "pkexec sh -c 'wg-quick down wg0 || wg-quick up wg0'",
         "tooltip": false,
         "exec": "$HOME/.config/waybar/scripts/vpn.sh",
         "return-type": "json",
