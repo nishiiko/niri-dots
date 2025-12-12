@@ -9,9 +9,9 @@ swww\
 swaybg (yea you need both cause i use swaybg for the overview wallpaper)\
 swaync\
 alacritty\
-rofi\
+rofi ( + rofi-emoji )\
 hyprlock\
-waybar\
+waybar
 
 ![screenshot of desktop](Screenshot.png)
 
