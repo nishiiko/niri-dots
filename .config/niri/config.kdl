@@ -173,6 +173,7 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"^MuseScore4$"# title=r#"^MuseScore Studio$"#
     match app-id=r#"^Firefox$"# title=r#"^Mozilla\ Firefox$"#
     match app-id=r#"^steam$"# title=r#"^Steam$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
