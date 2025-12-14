@@ -37,7 +37,7 @@ if [ $confirm == "y" ]; then
 
     cp -rv --preserve=links .config/* $HOME/.config
 
-    niri msg action do-screen-transition --delay 750
+    niri msg action do-screen-transition --delay-ms 750
 
     swaync-client -R &
     swaync-client -rs
