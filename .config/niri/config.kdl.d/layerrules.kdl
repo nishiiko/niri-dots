@@ -1,10 +1,10 @@
 layer-rule {
-    match namespace="^swaync-notification-window$"
-    match namespace="^swaync-control-center$"
-    block-out-from "screencast"
+  match namespace="^swaync-notification-window$"
+  match namespace="^swaync-control-center$"
+  block-out-from "screencast"
 }
 
 layer-rule {
-    match namespace="^wallpaper$"
-    place-within-backdrop true
+  match namespace="^wallpaper$"
+  place-within-backdrop true
 }

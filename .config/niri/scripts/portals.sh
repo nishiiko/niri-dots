@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if ! grep -r systemd /sbin/init; then
-    sleep 1
-    pkill -f xdg-desktop-portal
-    /usr/libexec/xdg-desktop-portal-gnome &
-    /usr/libexec/xdg-desktop-portal-gtk &
+  sleep 1
+  pkill -f xdg-desktop-portal
+  /usr/libexec/xdg-desktop-portal-gnome &
+  /usr/libexec/xdg-desktop-portal-gtk &
 fi

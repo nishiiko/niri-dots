@@ -12,61 +12,61 @@ include "config.kdl.d/inputs.kdl"
 include "config.kdl.d/outputs.kdl"
 
 layout {
-    gaps 16
-    center-focused-column "never"
+  gaps 16
+  center-focused-column "never"
 
-    preset-column-widths {
-        proportion 0.5
-        proportion 0.66
-        proportion 1.0
-    }
-    default-column-width { proportion 0.5; }
+  preset-column-widths {
+    proportion 0.5
+    proportion 0.66
+    proportion 1.0
+  }
+  default-column-width { proportion 0.5; }
 
-    focus-ring {
-        off
-    }
+  focus-ring {
+    off
+  }
 
-    tab-indicator {
-        width 6
-        length total-proportion=0.7
-        position "top"
-    }
+  tab-indicator {
+    width 6
+    length total-proportion=0.7
+    position "top"
+  }
 
-    border {
-        width 6
-    }
+  border {
+    width 6
+  }
 
-    shadow {
-        on
-        softness 5
-        spread 0 
-        offset x=10 y=10
-        color "#1A1A1ABB"
-        inactive-color "#1A1A1ABB"
-    }
+  shadow {
+    on
+    softness 5
+    spread 0 
+    offset x=10 y=10
+    color "#1A1A1ABB"
+    inactive-color "#1A1A1ABB"
+  }
 }
 
 gestures {
-    hot-corners {
-        off
-    }
+  hot-corners {
+    off
+  }
 }
 
 cursor {
-    hide-after-inactive-ms 3000
+  hide-after-inactive-ms 3000
 }
 
 hotkey-overlay {
-    skip-at-startup
+  skip-at-startup
 }
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%S.png"
 
 animations {
-    slowdown 1.5
+  slowdown 1.5
 }
 
 switch-events {
-    lid-close { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
+  lid-close { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
 }
