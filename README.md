@@ -13,16 +13,33 @@ rofi ( + rofi-emoji )\
 hyprlock\
 waybar
 
-<details><summary>Tanger theme</summary>
-![screenshot of desktop](Pictures/tanger1.png)
-![screenshot of desktop](Pictures/tanger2.png)
-![screenshot of desktop](Pictures/tanger3.png)
-![screenshot of desktop](Pictures/tanger4.png)
+<details>
+  <summary>Tanger theme</summary>
+
+  <table>
+    <tr>
+      <td><img src="Pictures/tanger1.png" alt="screenshot of desktop" width="300"></td>
+      <td><img src="Pictures/tanger2.png" alt="screenshot of desktop" width="300"></td>
+    </tr>
+    <tr>
+      <td><img src="Pictures/tanger3.png" alt="screenshot of desktop" width="300"></td>
+      <td><img src="Pictures/tanger4.png" alt="screenshot of desktop" width="300"></td>
+    </tr>
+  </table>
 </details>
 
-<details><summary>Omori theme</summary>
-![screenshot of desktop](Pictures/omori1.png)
-![screenshot of desktop](Pictures/omori2.png)
-![screenshot of desktop](Pictures/omori3.png)
-![screenshot of desktop](Pictures/omori4.png)
+
+<details>
+  <summary>Omori theme</summary>
+
+  <table>
+    <tr>
+      <td><img src="Pictures/omori1.png" alt="screenshot of desktop" width="300"></td>
+      <td><img src="Pictures/omori2.png" alt="screenshot of desktop" width="300"></td>
+    </tr>
+    <tr>
+      <td><img src="Pictures/omori3.png" alt="screenshot of desktop" width="300"></td>
+      <td><img src="Pictures/omori4.png" alt="screenshot of desktop" width="300"></td>
+    </tr>
+  </table>
 </details>
