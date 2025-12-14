@@ -16,7 +16,7 @@ binds {
 
   Mod+K                   { spawn "swaync-client" "-t"; }
 
-  Mod+O repeat=false      { toggle-overview; }
+  Mod+Apostrophe repeat=false      { toggle-overview; }
 
   Mod+Q                   { close-window; }
 
@@ -24,28 +24,28 @@ binds {
   Mod+Down                { focus-window-or-workspace-down; }
   Mod+Up                  { focus-window-or-workspace-up; }
   Mod+Right               { focus-column-right; }
-  Mod+M                   { focus-column-left; }
+  Mod+N                   { focus-column-left; }
   Mod+E                   { focus-window-down; }
-  Mod+N                   { focus-window-up; }
-  Mod+I                   { focus-column-right; }
+  Mod+I                   { focus-window-up; }
+  Mod+O                   { focus-column-right; }
 
   Mod+Shift+Left          { move-column-left; }
   Mod+Shift+Down          { move-window-down-or-to-workspace-down; }
   Mod+Shift+Up            { move-window-up-or-to-workspace-up; }
   Mod+Shift+Right         { move-column-right; }
-  Mod+Shift+M             { move-column-left; }
+  Mod+Shift+N             { move-column-left; }
   Mod+Shift+E             { move-window-down-or-to-workspace-down; }
-  Mod+Shift+N             { move-window-up-or-to-workspace-up; }
-  Mod+Shift+I             { move-column-right; }
+  Mod+Shift+I             { move-window-up-or-to-workspace-up; }
+  Mod+Shift+O             { move-column-right; }
    
   Mod+Ctrl+Shift+Left     { consume-or-expel-window-left; } 
   Mod+Ctrl+Shift+Down     { move-column-to-workspace-down; }
   Mod+Ctrl+Shift+Up       { move-column-to-workspace-up; }
   Mod+Ctrl+Shift+Right    { consume-or-expel-window-right; } 
-  Mod+Ctrl+Shift+M        { consume-or-expel-window-left; } 
+  Mod+Ctrl+Shift+N        { consume-or-expel-window-left; } 
   Mod+Ctrl+Shift+E        { move-column-to-workspace-down; }
-  Mod+Ctrl+Shift+N        { move-column-to-workspace-up; }
-  Mod+Ctrl+Shift+I        { consume-or-expel-window-right; } 
+  Mod+Ctrl+Shift+I        { move-column-to-workspace-up; }
+  Mod+Ctrl+Shift+O        { consume-or-expel-window-right; } 
 
   Mod+Home                { focus-column-first; }
   Mod+End                 { focus-column-last; }
@@ -76,13 +76,13 @@ binds {
   Mod+Page_Down           { focus-workspace-down; }
   Mod+Page_Up             { focus-workspace-up; }
   Mod+U                   { focus-workspace-down; }
-  Mod+L                   { focus-workspace-up; }
-  Mod+J                   { focus-monitor-left; }
-  Mod+Y                   { focus-monitor-right; }
+  Mod+Y                   { focus-workspace-up; }
+  Mod+L                   { focus-monitor-left; }
+  Mod+colon                   { focus-monitor-right; }
   Mod+Ctrl+Page_Down      { move-column-to-workspace-down; }
   Mod+Ctrl+Page_Up        { move-column-to-workspace-up; }
-  Mod+Ctrl+N              { move-column-to-workspace-down; }
-  Mod+Ctrl+E              { move-column-to-workspace-up; }
+  Mod+Ctrl+E              { move-column-to-workspace-down; }
+  Mod+Ctrl+I              { move-column-to-workspace-up; }
 
   Mod+Shift+Page_Down     { move-workspace-down; }
   Mod+Shift+Page_Up       { move-workspace-up; }
@@ -106,12 +106,12 @@ binds {
   Mod+Ctrl+Shift+WheelScrollDown  { consume-or-expel-window-right; }
 
   Mod+1                   { focus-column-left; }
-  Mod+2                   { focus-window-or-workspace-up; }
-  Mod+3                   { focus-window-or-workspace-down; }
+  Mod+2                   { focus-window-or-workspace-down; }
+  Mod+3                   { focus-window-or-workspace-up; }
   Mod+4                   { focus-column-right; }
   Mod+Shift+1             { move-column-left; }
-  Mod+Shift+2             { move-column-to-workspace-up focus=false; }
-  Mod+Shift+3             { move-column-to-workspace-down focus=false; }
+  Mod+Shift+2             { move-column-to-workspace-down focus=false; }
+  Mod+Shift+3             { move-column-to-workspace-up focus=false; }
   Mod+Shift+4             { move-column-right; }
 
   Mod+P                   { switch-preset-column-width; }
