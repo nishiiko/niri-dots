@@ -281,7 +281,7 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
-  background-color: var(--noti-bg-hover);
+  background-color: rgba(var(--noti-bg), 1);
 }
 
 .control-center {
