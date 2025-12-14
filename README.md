@@ -13,16 +13,16 @@ rofi ( + rofi-emoji )\
 hyprlock\
 waybar
 
-<details><summary>Tanger theme<summary>
+<details><summary>Tanger theme</summary>
 ![screenshot of desktop](Pictures/tanger1.png)
 ![screenshot of desktop](Pictures/tanger2.png)
 ![screenshot of desktop](Pictures/tanger3.png)
 ![screenshot of desktop](Pictures/tanger4.png)
-<details>
+</details>
 
-<details><summary>Omori theme<summary>
+<details><summary>Omori theme</summary>
 ![screenshot of desktop](Pictures/omori1.png)
 ![screenshot of desktop](Pictures/omori2.png)
 ![screenshot of desktop](Pictures/omori3.png)
 ![screenshot of desktop](Pictures/omori4.png)
-<details>
+</details>
