@@ -1,0 +1,1 @@
+../themes/tanger/wallpaper.sh

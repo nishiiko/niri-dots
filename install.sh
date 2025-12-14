@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 read -p "this will copy files into:
-$HOME/.config
-$HOME/Pictures
+$HOME/.config/
+and will also rm -rf:
+$HOME/.config/alacritty
+$HOME/.config/niri
+$HOME/.config/rofi
+$HOME/.config/waybar
+$HOME/.config/swaync
 
 i dont recommend you actually use this, i made this
 for myself where i intend to always nuke my previous config files
@@ -24,8 +29,21 @@ if [ $confirm == "y" ]; then
         : $((countdown--))
     done
 
-    cp -v .config/* -r $HOME/.config
-    cp -v Pictures/* -r $HOME/Pictures
+    rm -rf $HOME/.config/alacritty
+    rm -rf $HOME/.config/niri
+    rm -rf $HOME/.config/rofi
+    rm -rf $HOME/.config/waybar
+    rm -rf $HOME/.config/swaync
+
+    cp -rv --preserve=links .config/* $HOME/.config
+
+    niri msg action do-screen-transition --delay 750
+
+    swaync-client -R &
+    swaync-client -rs
+    $HOME/.config/niri/scripts/wallpaper.sh &
+    pkill -x waybar ; waybar &
+
     echo
     echo done
 fi

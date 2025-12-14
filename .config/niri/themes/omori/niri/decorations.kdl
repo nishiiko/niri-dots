@@ -1,0 +1,17 @@
+layout {
+  tab-indicator {
+    active-color "#FFAAFF"
+    inactive-color "#6D5D96"
+  }
+
+  border {
+    active-gradient from="#FDBDFF" to="#9DADFF" angle=135 relative-to="workspace-view" in="oklab"
+    inactive-gradient from="#9D6D9F" to="#3D5D96" angle=135 relative-to="workspace-view" in="oklab"
+    urgent-color "9B0000"
+  }
+}
+
+window-rule {
+    geometry-corner-radius 16
+    clip-to-geometry true
+}

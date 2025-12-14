@@ -1,0 +1,12 @@
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    IMSETTINGS_MODULE "fcitx"
+    GLFW_IM_MODULE "fcitx"
+    SDL_IM_MODULE "fcitx"
+    GTK_IM_MODULE null
+    QT_IM_MODULE "fcitx"
+    INPUT_METHOD "fcitx"
+    XMODIFIERS "@im=fcitx"
+    GTK_THEME "Orchis-Purple-Dark"
+}

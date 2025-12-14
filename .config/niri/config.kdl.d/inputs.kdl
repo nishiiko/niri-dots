@@ -1,0 +1,43 @@
+input {
+    warp-mouse-to-focus
+    focus-follows-mouse
+    keyboard {
+        xkb {
+            layout "gb(colemak_dh),gb"
+            options "caps:ctrl_shifted_capslock,altwin:swap_lalt_lwin"
+        }
+        numlock
+    }
+    touchpad {
+        // off
+        tap
+        dwt
+        // dwtp
+        // drag false
+        // drag-lock
+        natural-scroll
+        accel-speed 0.4
+        accel-profile "flat"
+        scroll-factor 0.5
+        // scroll-method "two-finger"
+        disabled-on-external-mouse
+    }
+
+    mouse {
+        // off
+        // natural-scroll
+        // accel-speed 0.2
+        accel-profile "flat"
+        // scroll-method "no-scroll"
+    }
+
+    trackpoint {
+        // off
+        // natural-scroll
+        // accel-speed 0.2
+        accel-profile "flat"
+        // scroll-method "on-button-down"
+        // scroll-button 273
+        // middle-emulation
+    }
+}

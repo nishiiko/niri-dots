@@ -13,7 +13,6 @@ until mullvad status | grep -q "Connected"; do
 done
 else
 
-sleep 0.5s
 if [ ! -d /proc/sys/net/ipv4/conf/wg0 ]; then
     echo '{"text":"VPN Disconnected","class":"disconnected","percentage":0}'
     exit
