@@ -10,7 +10,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^Firefox|firefox-bin$"# title=r#"^Mozilla\ Firefox$"#
+  match app-id=r#"^firefox-esr$"# title=r#"^Mozilla\ Firefox$"#
   match app-id=r#"^com\.obsproject\.Studio$"# title=r#"^OBS\ *.*.*$"#
   match app-id=r#"^MuseScore4$"# title=r#"^MuseScore Studio$"#
   match app-id=r#"^steam$"# title=r#"^Steam$"#
@@ -20,7 +20,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^Firefox$"# title="^Picture-in-Picture$"
+  match app-id=r#"^firefox-esr$"# title="^Picture-in-Picture$"
   match app-id=r#"^org.fcitx.fcitx5-config-qt$"#
   match app-id=r#"^org.pulseaudio.pavucontrol$"#
   match app-id=r#"^org\.twosheds\.iwgtk$"#
