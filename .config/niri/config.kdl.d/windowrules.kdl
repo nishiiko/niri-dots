@@ -1,9 +1,3 @@
-// Fix OBS with server-side decorations missing a minimum width.
-window-rule {
-  match app-id=r#"^com\.obsproject\.Studio$"#
-  min-width 876
-}
-
 window-rule {
   match is-floating=true
   exclude app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
@@ -16,10 +10,10 @@ window-rule {
 }
 
 window-rule {
+  match app-id=r#"^Firefox|firefox-bin$"# title=r#"^Mozilla\ Firefox$"#
+  match app-id=r#"^com\.obsproject\.Studio$"# title=r#"^OBS\ *.*.*$"#
   match app-id=r#"^MuseScore4$"# title=r#"^MuseScore Studio$"#
-  match app-id=r#"^Firefox$"# title=r#"^Mozilla\ Firefox$"#
   match app-id=r#"^steam$"# title=r#"^Steam$"#
-  match app-id=r#"^com\.obsproject\.Studio$"#
   match app-id=r#"^Spotify$"#
   match app-id=r#"^discord$"#
   default-column-width { proportion 0.66; }
