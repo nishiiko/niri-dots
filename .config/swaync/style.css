@@ -330,11 +330,12 @@ notificationwindow, blankwindow, blankwindow {
 
 /*** Widgets ***/
 .widget {
-  margin: 8px;
+  margin: 12px;
   padding: 8px;
   border: var(--widget-border);
   border-radius: var(--border-radius);
   background: var(--widget-background);
+  box-shadow: var(--notification-shadow);
 }
 
 /* Title widget */
