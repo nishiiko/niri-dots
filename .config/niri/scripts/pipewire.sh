@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-if ! grep -r systemd /sbin/init; then
+if ! grep -r systemd /sbin/init \
+  && ! ls /usr/bin/ | grep openrc-init; then
   pkill -x pipewire\|pipewire-pulse\|wireplumber
 
   pidwait -x pipewire\|pipewire-pulse\|wireplumber
@@ -10,6 +11,7 @@ if ! grep -r systemd /sbin/init; then
 
   sleep 1s
   wireplumber &
+  notify-send pass -u critical
 fi
 sleep 0.5s
 paplay --volume=65535 $HOME/.config/niri/scripts/assets/heal.wav &
