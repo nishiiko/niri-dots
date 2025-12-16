@@ -70,16 +70,7 @@
   "cpu": {
     "format": "{usage:02}%  ",
     "tooltip": false,
-    "interval": 2
-  },
-  
-  "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "critical-threshold": 60,
-    "interval": 2,
-    "format": " {temperatureC}°C {icon}",
-    "format-icons": ["", "", ""],
-  	"tooltip": false
+    "interval": 1
   },
   
   "battery": {
@@ -121,11 +112,10 @@
   
   "custom/vpn": {
     "format": "{icon} {text} ",
-    "on-click": "pkexec sh -c 'wg-quick down wg0 || wg-quick up wg0'",
+    "on-click": "sh -c 'mullvad status | grep Disconnected &>/dev/null && mullvad connect || mullvad disconnect'",
     "tooltip": false,
     "exec": "$HOME/.config/waybar/scripts/vpn.sh",
     "return-type": "json",
-    "interval": 600,
     "signal": 8,
     "format-icons": ["  ","  "]
   },

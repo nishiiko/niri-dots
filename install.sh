@@ -40,7 +40,7 @@ if [ $confirm == "y" ]; then
     niri msg action do-screen-transition --delay-ms 750
 
     swaync-client -R &
-    swaync-client -rs
+    swaync-client -rs &
     $HOME/.config/niri/scripts/wallpaper.sh &
     pkill -x waybar ; waybar &
 
