@@ -11,8 +11,8 @@ binds {
   XF86AudioMute           allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
   XF86AudioMicMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-  XF86MonBrightnessDown   allow-when-locked=true { spawn "brightnessctl" "set" "2%-" "-e" "-s"; }
-  XF86MonBrightnessUp     allow-when-locked=true { spawn "brightnessctl" "set" "2%+" "-e" "-s"; }
+  XF86MonBrightnessDown   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "2%-" "-e"; }
+  XF86MonBrightnessUp     allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+2%" "-e"; }
 
   Mod+K                   { spawn "swaync-client" "-t"; }
 
