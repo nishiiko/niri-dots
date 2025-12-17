@@ -12,7 +12,7 @@ layer-rule {
 layer-rule {
   match namespace="^waybar$"
   shadow {
-  
+    on
   }
 }
 
