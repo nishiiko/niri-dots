@@ -8,3 +8,18 @@ layer-rule {
   match namespace="^wallpaper$"
   place-within-backdrop true
 }
+
+layer-rule {
+  match namespace="^waybar$"
+  shadow {
+  
+  }
+}
+
+layer-rule {
+  match namespace="^rofi$"
+  shadow {
+    on
+  }
+  geometry-corner-radius 40
+}

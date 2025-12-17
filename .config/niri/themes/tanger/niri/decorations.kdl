@@ -15,3 +15,9 @@ window-rule {
     geometry-corner-radius 16
     clip-to-geometry true
 }
+
+recent-windows {
+  highlight {
+    corner-radius 16
+  }
+}
