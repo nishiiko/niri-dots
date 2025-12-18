@@ -13,6 +13,9 @@ rofi ( + rofi-emoji )\
 hyprlock\
 waybar
 
+you can use `bash $HOME/.config/niri/scripts/themeswap.sh` to swap themes\
+ill add a rofi menu if i get too lazy to manually invoke the script
+
 <details>
   <summary>Tanger theme</summary>
 
