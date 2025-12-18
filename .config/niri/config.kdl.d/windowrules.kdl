@@ -20,7 +20,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^firefox-esr$"# title="^Picture-in-Picture$"
+  match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title="^Picture-in-Picture$"
   match app-id=r#"^org.fcitx.fcitx5-config-qt$"#
   match app-id=r#"^org.pulseaudio.pavucontrol$"#
   match app-id=r#"^org\.twosheds\.iwgtk$"#

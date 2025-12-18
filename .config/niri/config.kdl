@@ -52,10 +52,6 @@ gestures {
   }
 }
 
-cursor {
-  hide-after-inactive-ms 3000
-}
-
 hotkey-overlay {
   skip-at-startup
 }
