@@ -5,7 +5,7 @@ also my dots will probably not look exactly like the screenshots but it should p
 
 ## things you need (maybe):
 niri (duh)\
-swww\
+awww (formerly swww)\
 swaybg (yea you need both cause i use swaybg for the overview wallpaper)\
 swaync\
 alacritty\
