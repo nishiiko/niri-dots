@@ -23,6 +23,10 @@ input {
     disabled-on-external-mouse
   }
 
+  tablet {
+    map-to-output "DP-1"
+  }
+
   mouse {
     // off
     // natural-scroll
