@@ -1,17 +1,27 @@
 #!/usr/bin/env bash
 
 vpn_ip=
+connected=false
 
 if ! mullvad status | grep -q -e "Connecting" -e "Connected"; then
-    echo '{"text":"VPN Disconnected","class":"disconnected","percentage":0}'
-    exit
+  echo '{"text":"VPN Disconnected","class":"disconnected","percentage":0}'
+  exit
 fi
 
-until mullvad status | grep -q "Connected"; do
-    continue
+for i in {1..10}; do
+  if mullvad status | grep -q "Connected"; then
+    connected=true
+  fi
+  sleep 0.1
+  continue
 done
+
+if ! $connected; then
+  echo '{"text":"VPN Disconnected","class":"disconnected","percentage":0}'
+  exit
+fi
 
 vpn_ip=$(curl -s4 ipinfo.io | jq -r '"\(.ip) \(.country)"')
 if [[ -n "$vpn_ip" ]]; then
-    jq -c -n --arg ip "$vpn_ip" '{"text":$ip,"class":"connected","percentage":100}'
+  jq -c -n --arg ip "$vpn_ip" '{"text":$ip,"class":"connected","percentage":100}'
 fi
