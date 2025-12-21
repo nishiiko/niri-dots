@@ -8,5 +8,4 @@ environment {
   QT_IM_MODULE "fcitx"
   INPUT_METHOD "fcitx"
   XMODIFIERS "@im=fcitx"
-  GTK_THEME "Orchis-Purple-Dark"
 }
