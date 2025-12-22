@@ -9,7 +9,7 @@ output "DP-1" {
   position x=0 y=0
   scale 1
   focus-at-startup
-  variable-refresh-rate on-demand=true
+  variable-refresh-rate
 }
 
 output "HDMI-A-1" {

@@ -44,9 +44,8 @@ window-rule {
   default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
-window-rule {
+/-window-rule {
   match app-id=r#"^steam_app_.*$"#
-  match app-id=r#"^org.vinegarhq.Sober$"#
 
   open-fullscreen true
   variable-refresh-rate true
