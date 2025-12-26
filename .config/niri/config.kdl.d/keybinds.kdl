@@ -100,8 +100,7 @@ binds {
 
   Mod+P                   { switch-preset-column-width; }
   Mod+Shift+P             { reset-window-height; }
-  Mod+F                   { maximize-column; }
-  Mod+Return              { fullscreen-window; }
+  Mod+F                   { fullscreen-window; }
 
   Mod+Shift+F             { expand-column-to-available-width; }
 
