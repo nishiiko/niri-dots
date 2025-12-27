@@ -94,9 +94,11 @@ binds {
   Mod+3                   { focus-window-or-workspace-up; }
   Mod+4                   { focus-column-right; }
   Mod+Shift+1             { move-column-left; }
-  Mod+Shift+2             { move-column-to-workspace-down focus=false; }
-  Mod+Shift+3             { move-column-to-workspace-up focus=false; }
+  Mod+Shift+2             { move-window-down-or-to-workspace-down; }
+  Mod+Shift+3             { move-window-up-or-to-workspace-up; }
   Mod+Shift+4             { move-column-right; }
+  Mod+Ctrl+Shift+1        { consume-or-expel-window-left; }
+  Mod+Ctrl+Shift+4        { consume-or-expel-window-right; }
 
   Mod+P                   { switch-preset-column-width; }
   Mod+Shift+P             { reset-window-height; }
