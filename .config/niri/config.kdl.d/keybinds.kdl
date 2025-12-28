@@ -121,8 +121,8 @@ binds {
 
   Mod+V                   { toggle-column-tabbed-display; }
 
-  Mod+Space               { switch-layout "next"; }
-  Mod+Shift+Space         { switch-layout "prev"; }
+  Mod+Control+Space       { switch-layout "next"; }
+  Mod+Control+Shift+Space { switch-layout "prev"; }
 
   Mod+Shift+R             { screenshot show-pointer=false; }
   Print                   { screenshot-screen show-pointer=false; }
