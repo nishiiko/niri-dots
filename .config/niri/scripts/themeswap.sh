@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 cd $HOME/.config/niri/themes/
 theme=non-existent-theme
 

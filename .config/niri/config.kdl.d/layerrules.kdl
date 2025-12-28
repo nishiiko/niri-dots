@@ -1,5 +1,5 @@
 layer-rule {
-  match namespace="^swaync-notification-window$"
+//  match namespace="^swaync-notification-window$"
   match namespace="^swaync-control-center$"
   block-out-from "screencast"
 }
