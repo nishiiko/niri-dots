@@ -8,11 +8,12 @@ if ! mullvad status | grep -q -e "Connecting" -e "Connected"; then
   exit
 fi
 
-for i in {1..10}; do
+for i in {1..50}; do
   if mullvad status | grep -q "Connected"; then
     connected=true
+    break 1
   fi
-  sleep 0.1
+  sleep 0.1s
   continue
 done
 
