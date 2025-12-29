@@ -2,13 +2,14 @@
 
 vpn_ip=
 connected=false
+sleep 0.2s
 
-if ! mullvad status | grep -q -e "Connecting" -e "Connected"; then
+if ! mullvad status | grep -q "Connect"; then
   echo '{"text":"VPN Disconnected","class":"disconnected","percentage":0}'
   exit
 fi
 
-for i in {1..50}; do
+for i in {1..100}; do
   if mullvad status | grep -q "Connected"; then
     connected=true
     break 1
