@@ -5,7 +5,7 @@ layer-rule {
 }
 
 layer-rule {
-  match namespace="^wallpaper$"
+  match namespace="^swww-daemonblur$"
   place-within-backdrop true
 }
 
