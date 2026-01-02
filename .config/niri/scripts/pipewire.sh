@@ -11,7 +11,6 @@ if ! grep -r systemd /sbin/init \
 
   sleep 1s
   wireplumber &
-  notify-send pass -u critical
 fi
 sleep 0.5s
 paplay --volume=65535 $HOME/.config/niri/scripts/assets/heal.wav &
