@@ -6,6 +6,7 @@
 include "config.kdl.d/startup.kdl"
 include "config.kdl.d/animations.kdl"
 include "config.kdl.d/keybinds.kdl"
+include "config.kdl.d/colours.kdl"
 include "config.kdl.d/decorations.kdl"
 include "config.kdl.d/windowrules.kdl"
 include "config.kdl.d/layerrules.kdl"

@@ -20,7 +20,7 @@ echo ok
 niri msg action do-screen-transition --delay-ms 750
 
 ln -sfrv $PWD/$theme/alacritty/colours.toml $HOME/.config/alacritty/
-ln -sfrv $PWD/$theme/niri/decorations.kdl $HOME/.config/niri/config.kdl.d/
+ln -sfrv $PWD/$theme/niri/colours.kdl $HOME/.config/niri/config.kdl.d/
 ln -sfrv $PWD/$theme/rofi/background.png $HOME/.config/rofi/
 ln -sfrv $PWD/$theme/rofi/colours.rasi $HOME/.config/rofi/
 ln -sfrv $PWD/$theme/swaync/colours.css $HOME/.config/swaync/

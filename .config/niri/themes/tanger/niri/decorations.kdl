@@ -1,16 +1,3 @@
-layout {
-  tab-indicator {
-    active-color "#FFAAFF"
-    inactive-color "#6D5D96"
-  }
-
-  border {
-    active-gradient from="#9AC7A9" to="#77C466" relative-to="workspace-view" angle=135 in="oklab"
-    inactive-gradient from="#578466" to="#376446" relative-to="workspace-view" angle=135 in="oklab"
-    urgent-color "9B0000"
-  }
-}
-
 window-rule {
     geometry-corner-radius 16
     clip-to-geometry true
