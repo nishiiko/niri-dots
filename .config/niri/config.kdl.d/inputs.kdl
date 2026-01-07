@@ -1,5 +1,5 @@
 input {
-  warp-mouse-to-focus
+  warp-mouse-to-focus mode="center-xy-always"
   focus-follows-mouse
   keyboard {
     xkb {

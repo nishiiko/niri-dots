@@ -128,8 +128,6 @@ binds {
   Print                   { screenshot-screen show-pointer=false; }
   Mod+Print               { screenshot-window; }
 
-  Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-
   Ctrl+Alt+Delete         { quit; }
 
   Ctrl+Alt+Shift+P        { power-off-monitors; }
