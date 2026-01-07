@@ -1,7 +1,7 @@
 binds {
   Mod+Shift+Slash { show-hotkey-overlay; }
 
-  Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "sh" "-c" "alacritty msg create-window || alacritty"; }
+  Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
   Mod+S hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
   Ctrl+Mod+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
   Ctrl+Shift+Alt+L { spawn "fcitx5-remote" "-t"; }
@@ -11,8 +11,8 @@ binds {
   XF86AudioMute           allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
   XF86AudioMicMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-  XF86MonBrightnessDown   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "2%-" "-e"; }
-  XF86MonBrightnessUp     allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+2%" "-e"; }
+  XF86MonBrightnessDown   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "2%-"; }
+  XF86MonBrightnessUp     allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "2%+"; }
 
   Mod+K                   { spawn "swaync-client" "-t"; }
 

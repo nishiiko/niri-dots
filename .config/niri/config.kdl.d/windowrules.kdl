@@ -5,7 +5,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^discord$"#
+  match app-id=r#"^discord|vesktop$"#
   block-out-from "screencast"
 }
 
@@ -14,8 +14,8 @@ window-rule {
   match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Mozilla\ Firefox$"#
   match app-id=r#"^MuseScore4$"# title=r#"^MuseScore Studio$"#
   match app-id=r#"^steam$"# title=r#"^Steam$"#
+  match app-id=r#"^discord|vesktop$"#
   match app-id=r#"^spotify$"#
-  match app-id=r#"^discord$"#
   default-column-width { proportion 0.66; }
 }
 
