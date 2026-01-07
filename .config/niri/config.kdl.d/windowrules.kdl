@@ -1,4 +1,9 @@
 window-rule {
+  match app-id=r#"^waybar$"#
+  open-focused false
+}
+
+window-rule {
   match is-floating=true
   exclude app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
   baba-is-float true
