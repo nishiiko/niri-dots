@@ -1,7 +1,8 @@
 layout {
+  // i dont actually use tabs ever actually
   tab-indicator {
-    active-color "#FFAAFF"
-    inactive-color "#6D5D96"
+    active-color "#AADDAA"
+    inactive-color "#447744"
   }
 
   border {
