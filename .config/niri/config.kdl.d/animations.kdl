@@ -23,12 +23,11 @@ animations {
   }
 
   window-open {
-    duration-ms 350
-    curve "ease-out-expo"
+    spring damping-ratio=1.00 stiffness=700 epsilon=0.0001
   }
 
   window-close {
-    duration-ms 650
+    duration-ms 600
     curve "linear"
     custom-shader r"
     vec4 fall_and_rotate(vec3 coords_geo, vec3 size_geo) {
