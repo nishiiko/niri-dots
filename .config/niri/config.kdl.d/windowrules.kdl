@@ -56,7 +56,6 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^org.godotengine.Editor$"# title=r#"^Godot$"#
   match app-id=r#"^org.kde.kdenlive$"#
   open-maximized true
 }
