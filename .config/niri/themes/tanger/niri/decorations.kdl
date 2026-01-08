@@ -22,8 +22,8 @@ layout {
     softness 5
     spread 0
     offset x=10 y=10
-    color "#1A1A1ADD"
-    inactive-color "#1A1A1ADD"
+    color "#1A1A1ABB"
+    inactive-color "#1A1A1ABB"
   }
 
   tab-indicator {
