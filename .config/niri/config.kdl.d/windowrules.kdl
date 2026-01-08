@@ -26,7 +26,7 @@ window-rule {
 
 window-rule {
   match app-id=r#"^org.kde.kdenlive$"# title=r#"^Splash Screen — Kdenlive$"#
-  match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title="^Picture-in-Picture$"
+  match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Picture-in-Picture$"#
   match app-id=r#"^org.fcitx.fcitx5-config-qt$"#
   match app-id=r#"^org.pulseaudio.pavucontrol$"#
   match app-id=r#"^org\.twosheds\.iwgtk$"#
@@ -39,9 +39,9 @@ window-rule {
   match app-id=r#"^piper$"#
   match title=r#"^Open"#
   
+  exclude app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
   exclude app-id=r#"^MuseScore4$"# title=r#"^MuseScore Studio$"#
   exclude app-id=r#"^steam$"# title=r#"^Steam$"#
-  exclude app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
   open-floating true
 }
 
@@ -56,7 +56,22 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"org.godotengine.Editor"# title=r#" - Godot Engine$"#
+  match app-id=r#"^org.godotengine.Editor$"# title=r#"^Godot$"#
   match app-id=r#"^org.kde.kdenlive$"#
   open-maximized true
+}
+
+// Indicate screencasted windows with red colors.
+window-rule {
+  match is-window-cast-target=true
+
+  border {
+    active-color "#f38ba8"
+    inactive-color "#7d0d2d"
+  }
+
+  tab-indicator {
+    active-color "#f38ba8"
+    inactive-color "#7d0d2d"
+  }
 }
