@@ -13,6 +13,7 @@ layer-rule {
   match namespace="^waybar$"
   shadow {
     on
+    offset x=0 y=10
   }
 }
 

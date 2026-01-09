@@ -1,6 +1,5 @@
 window-rule {
-  match app-id=r#"^waybar$"#
-  open-focused false
+  draw-border-with-background false
 }
 
 window-rule {
