@@ -36,9 +36,8 @@ window-rule {
   match app-id=r#"^steam$"#
   match app-id=r#"^iwgtk$"#
   match app-id=r#"^piper$"#
-  match title=r#"^Open"#
+  match title=r#"^Open$"#
   
-  exclude app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
   exclude app-id=r#"^MuseScore4$"# title=r#"^MuseScore Studio$"#
   exclude app-id=r#"^steam$"# title=r#"^Steam$"#
   open-floating true
