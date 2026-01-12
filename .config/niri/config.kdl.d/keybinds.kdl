@@ -20,31 +20,17 @@ binds {
 
   Mod+Q                   { close-window; }
 
-  Mod+Left                { focus-column-left; }
-  Mod+Down                { focus-window-down; }
-  Mod+Up                  { focus-window-up; }
-  Mod+Right               { focus-column-right; }
   Mod+N                   { focus-column-left; }
   Mod+E                   { focus-window-down; }
   Mod+I                   { focus-window-up; }
   Mod+O                   { focus-column-right; }
 
-  Mod+Shift+Left          { move-column-left; }
-  Mod+Shift+Down          { move-column-to-workspace-down focus=false; }
-  Mod+Shift+Up            { move-column-to-workspace-up focus=false; }
-  Mod+Shift+Right         { move-column-right; }
   Mod+Shift+N             { move-column-left; }
   Mod+Shift+E             { move-window-down; }
   Mod+Shift+I             { move-window-up; }
   Mod+Shift+O             { move-column-right; }
    
-  Mod+Ctrl+Shift+Left     { consume-or-expel-window-left; } 
-  Mod+Ctrl+Shift+Down     { move-column-to-workspace-down focus=false; }
-  Mod+Ctrl+Shift+Up       { move-column-to-workspace-up focus=false; }
-  Mod+Ctrl+Shift+Right    { consume-or-expel-window-right; } 
   Mod+Ctrl+Shift+N        { consume-or-expel-window-left; } 
-  Mod+Ctrl+Shift+E        { move-column-to-workspace-down focus=false; }
-  Mod+Ctrl+Shift+I        { move-column-to-workspace-up focus=false; }
   Mod+Ctrl+Shift+O        { consume-or-expel-window-right; } 
 
   Mod+U                   { focus-workspace-down; }
