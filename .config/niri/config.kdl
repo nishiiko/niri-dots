@@ -15,7 +15,7 @@ include "config.kdl.d/outputs.kdl"
 
 layout {
   center-focused-column "never"
-
+  empty-workspace-above-first
   preset-column-widths {
     proportion 0.5
     proportion 0.66
