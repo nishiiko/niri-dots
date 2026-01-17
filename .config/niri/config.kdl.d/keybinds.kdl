@@ -36,11 +36,9 @@ binds {
   Mod+U                   { focus-workspace-down; }
   Mod+Y                   { focus-workspace-up; }
   Mod+L                   { focus-monitor-left; }
-  Mod+colon               { focus-monitor-right; }
-  Mod+Ctrl+U              { move-column-to-workspace-down focus=false; }
-  Mod+Ctrl+Y              { move-column-to-workspace-up focus=false; }
-  Mod+Ctrl+L              { move-column-to-monitor-left; }
-  Mod+Ctrl+colon          { move-column-to-monitor-right; }
+  Mod+semicolon           { focus-monitor-right; }
+  Mod+Shift+L             { move-column-to-monitor-left; }
+  Mod+Shift+semicolon     { move-column-to-monitor-right; }
 
   Mod+Shift+Page_Down     { move-window-down; }
   Mod+Shift+Page_Up       { move-window-up; }
