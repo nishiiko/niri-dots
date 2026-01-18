@@ -4,7 +4,7 @@
   "positionX": "right",
   "positionY": "top",
   "control-center-positionX": "right",
-  "layer": "overlay",
+  "layer": "top",
   "control-center-layer": "overlay",
   "layer-shell": true,
   "layer-shell-cover-screen": false,
@@ -18,6 +18,8 @@
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
   "notification-window-height": 400,
+  "notification-window-preferred-output": "DP-1",
+  "control-center-preferred-output": "DP-1",
   "timeout": 5,
   "timeout-low": 5,
   "timeout-critical": 5,
@@ -39,14 +41,10 @@
       "exec": "bash -c '$HOME/.config/swaync/scripts/notification.sh'",
       "urgency": "Normal"
     },
-    "Sound2": {
-      "exec": "bash -c '$HOME/.config/swaync/scripts/notification.sh'",
-      "urgency": "Critical"
-    },
-    "example-action-script": {
-      "exec": "echo 'Do something actionable!'",
-      "urgency": "Normal",
-      "run-on": "action"
+    "sound2": {
+      "exec": "bash -c 'paplay $HOME/.config/swaync/GEN_Jump.ogg'",
+      "app-name": "^niri$",
+      "summary": "^Screenshot captured$"
     }
   },
   "notification-visibility": {
