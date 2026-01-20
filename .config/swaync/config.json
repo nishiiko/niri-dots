@@ -53,6 +53,11 @@
       "state": "muted",
       "urgency": "Low",
       "app-name": "Spotify"
+    },
+    "sound2": {
+      "app-name": "^niri$",
+      "summary": "^Screenshot captured$",
+      "override-urgency": "critical"
     }
   },
   "widgets": [
