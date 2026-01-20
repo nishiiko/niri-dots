@@ -42,9 +42,10 @@
       "urgency": "Normal"
     },
     "sound2": {
-      "exec": "bash -c 'paplay $HOME/.config/swaync/GEN_Jump.ogg'",
+      "exec": "bash -c 'paplay $HOME/.config/swaync/se_elevator_ding.ogg'",
       "app-name": "^niri$",
-      "summary": "^Screenshot captured$"
+      "summary": "^Screenshot captured$",
+      "urgency": "Critical"
     }
   },
   "notification-visibility": {
@@ -52,11 +53,6 @@
       "state": "muted",
       "urgency": "Low",
       "app-name": "Spotify"
-    },
-    "niri": {
-      "app-name": "^niri$",
-      "summary": "^Screenshot captured$",
-      "override-urgency": "critical"
     }
   },
   "widgets": [
