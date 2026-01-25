@@ -10,8 +10,8 @@ recent-windows {
 }
 
 cursor {
-  xcursor-theme "Bibata-Modern-Ice"
-  xcursor-size 24
+  xcursor-theme "okayuXcur"
+  xcursor-size 32
 }
 
 layout {
