@@ -10,7 +10,7 @@ recent-windows {
 }
 
 cursor {
-  xcursor-theme "okayuXcur"
+  xcursor-theme "volantes_light_cursors"
   xcursor-size 32
 }
 
