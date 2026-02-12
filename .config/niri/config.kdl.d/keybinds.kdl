@@ -39,9 +39,6 @@ binds {
   Mod+semicolon           { focus-monitor-right; }
   Mod+Shift+L             { move-column-to-monitor-left; }
   Mod+Shift+semicolon     { move-column-to-monitor-right; }
-
-  Mod+Shift+Page_Down     { move-window-down; }
-  Mod+Shift+Page_Up       { move-window-up; }
   Mod+Shift+U             { move-column-to-workspace-down focus=false; }
   Mod+Shift+Y             { move-column-to-workspace-up focus=false; }
 
@@ -62,7 +59,6 @@ binds {
   Mod+Shift+F             { toggle-windowed-fullscreen; }
 
   Mod+C                   { center-column; }
-
   Mod+Ctrl+C              { center-visible-columns; }
 
   Mod+Minus               { set-column-width "-5%"; }
