@@ -22,7 +22,7 @@ main () {
       --background=none \
       --keep-open=yes \
       --geometry=355x490 \
-      /opt/explode/explosion-boom.gif \
+      /opt/explode/3eGiiqb6Ew.gif \
       --audio-file=/opt/explode/deltarune-explosion.mp3 &>/dev/null
   loginctl poweroff
   sleep 5s
