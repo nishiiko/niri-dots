@@ -12,6 +12,7 @@ include "config.kdl.d/windowrules.kdl"
 include "config.kdl.d/layerrules.kdl"
 include "config.kdl.d/inputs.kdl"
 include "config.kdl.d/outputs.kdl"
+include "config.kdl.d/silly.kdl"
 
 layout {
   center-focused-column "never"

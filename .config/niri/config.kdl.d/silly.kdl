@@ -1,0 +1,13 @@
+// this is for some extra script i have externally from niri
+window-rule {
+  match app-id=r#"^mpv$"# title=r#"^3eGiiqb6Ew.gif$"#
+  draw-border-with-background false
+  open-floating true
+  baba-is-float false
+  border {
+    off
+  }
+  shadow {
+    off
+  }
+}
