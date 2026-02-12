@@ -57,7 +57,7 @@ binds {
   Mod+Ctrl+Shift+4        { consume-or-expel-window-right; }
 
   Mod+P                   { switch-preset-column-width; }
-  Mod+Shift+P             { reset-window-height; }
+  Mod+Shift+P             { expand-column-to-available-width; }
   Mod+F                   { fullscreen-window; }
   Mod+Shift+F             { toggle-windowed-fullscreen; }
 

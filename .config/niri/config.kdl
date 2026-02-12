@@ -28,6 +28,10 @@ layout {
   }
 }
 
+cursor {
+  hide-after-inactive-ms 2000
+}
+
 gestures {
   hot-corners {
     off
@@ -44,6 +48,10 @@ clipboard {
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%S.png"
+
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
 
 switch-events {
   lid-close { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
