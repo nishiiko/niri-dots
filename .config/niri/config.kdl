@@ -30,6 +30,7 @@ layout {
 }
 
 cursor {
+  xcursor-theme "volantes_light_cursors"
   hide-after-inactive-ms 2000
 }
 
