@@ -14,7 +14,17 @@ window-rule {
 }
 
 window-rule {
+  match app-id=r#"^steam_app_*$"#
+  open-fullscreen true
+}
+
+window-rule {
   match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Mozilla Firefox$"#
+  match app-id=r#"^org.kde.kdenlive$"#
+  open-maximized true
+}
+
+window-rule {
   match app-id=r#"^com.obsproject.Studio$"# title=r#"^OBS *.*.*$"#
   match app-id=r#"^MuseScore4$"# title=r#"^MuseScore Studio$"#
   match app-id=r#"^steam$"# title=r#"^Steam$"#
@@ -50,16 +60,6 @@ window-rule {
   match app-id="steam" title=r#"^notificationtoasts_d+_desktop$"#
   default-floating-position x=10 y=10 relative-to="bottom-right"
   open-focused false
-}
-
-window-rule {
-  match app-id=r#"^steam_app_*$"#
-  open-fullscreen true
-}
-
-window-rule {
-  match app-id=r#"^org.kde.kdenlive$"#
-  open-maximized true
 }
 
 // Indicate screencasted windows with red colors.
