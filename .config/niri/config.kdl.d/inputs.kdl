@@ -25,6 +25,7 @@ input {
 
   tablet {
     map-to-output "DP-1"
+    left-handed
   }
 
   mouse {
