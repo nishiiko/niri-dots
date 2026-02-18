@@ -3,8 +3,7 @@ binds {
 
   Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
   Mod+S hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
-  Ctrl+Shift+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
-  Mod+Ctrl+Shift+L { spawn "fcitx5-remote" "-t"; }
+  Mod+Ctrl+Shift+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
 
   XF86AudioRaiseVolume    allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "-l" "1"; }
   XF86AudioLowerVolume    allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
@@ -73,13 +72,11 @@ binds {
   Mod+V                   { toggle-column-tabbed-display; }
 
   Mod+Control+Space       { switch-layout "next"; }
-  Mod+Control+Shift+Space { switch-layout "prev"; }
+  Mod+Ctrl+Shift+Space    { spawn "fcitx5-remote" "-t"; }
 
   Mod+Shift+R             { screenshot show-pointer=false; }
   Print                   { screenshot-screen show-pointer=false; }
   Mod+Print               { screenshot-window; }
 
-  Ctrl+Alt+Delete         { quit; }
-
-  Ctrl+Alt+Shift+P        { power-off-monitors; }
+  Ctrl+Shift+Delete       { quit; }
 }

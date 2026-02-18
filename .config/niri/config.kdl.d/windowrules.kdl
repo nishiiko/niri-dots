@@ -10,7 +10,7 @@ window-rule {
 
 window-rule {
   match app-id=r#"^discord$"#
-  block-out-from "screencast"
+  block-out-from "screen-capture"
 }
 
 window-rule {
