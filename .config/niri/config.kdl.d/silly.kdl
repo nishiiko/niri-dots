@@ -10,4 +10,7 @@ window-rule {
   shadow {
     off
   }
+  background-effect {
+    blur false
+  }
 }

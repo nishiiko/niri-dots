@@ -1,7 +1,17 @@
 layer-rule {
+  background-effect {
+    blur true
+    xray false
+  }
+}
+
+layer-rule {
   match namespace="^swaync-notification-window$"
   match namespace="^swaync-control-center$"
   block-out-from "screencast"
+  background-effect { // this will be temporary hopefully
+    blur false
+  }
 }
 
 layer-rule {

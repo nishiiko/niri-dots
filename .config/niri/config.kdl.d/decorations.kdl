@@ -1,6 +1,14 @@
 window-rule {
   geometry-corner-radius 16
   clip-to-geometry true
+  background-effect {
+    blur true
+  }
+}
+
+blur {
+  passes 4
+  offset 3
 }
 
 recent-windows {

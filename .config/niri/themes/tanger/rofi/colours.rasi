@@ -1,7 +1,7 @@
 * {
 	border: #9AC7A9FF;
-	main-bg: #42574F;
-	active-bg: #576C64;
+	main-bg: #42574FB9;
+	active-bg: #576C64B9;
 	active-text: #FFF;
 	passive-text: #AAAF;
 }

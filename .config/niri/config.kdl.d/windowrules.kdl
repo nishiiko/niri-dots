@@ -5,6 +5,9 @@ window-rule {
 window-rule {
   match is-floating=true
   exclude app-id="steam" title=r#"^notificationtoasts_d+_desktop$"#
+  background-effect {
+    xray false
+  }
   baba-is-float true
 }
 
