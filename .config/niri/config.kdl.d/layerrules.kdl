@@ -1,5 +1,5 @@
 layer-rule {
-//  match namespace="^swaync-notification-window$"
+  match namespace="^swaync-notification-window$"
   match namespace="^swaync-control-center$"
   block-out-from "screencast"
 }
@@ -19,8 +19,8 @@ layer-rule {
 
 layer-rule {
   match namespace="^rofi$"
+  geometry-corner-radius 40
   shadow {
     on
   }
-  geometry-corner-radius 40
 }

@@ -2,8 +2,8 @@
 import = ["~/.config/alacritty/colours.toml"]
 
 [window]
-opacity = 1.0
-padding = { x = 10, y = 10 } 
+opacity = 1.00
+padding = { x = 10, y = 10 }
 decorations = "None"
 
 [font]

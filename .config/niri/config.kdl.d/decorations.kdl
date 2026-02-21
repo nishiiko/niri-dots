@@ -1,6 +1,6 @@
 window-rule {
-    geometry-corner-radius 16
-    clip-to-geometry true
+  geometry-corner-radius 16
+  clip-to-geometry true
 }
 
 recent-windows {
