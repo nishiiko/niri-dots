@@ -38,8 +38,8 @@ binds {
   Mod+semicolon           { focus-monitor-right; }
   Mod+Shift+L             { move-column-to-monitor-left; }
   Mod+Shift+semicolon     { move-column-to-monitor-right; }
-  Mod+Shift+U             { move-column-to-workspace-down focus=false; }
-  Mod+Shift+Y             { move-column-to-workspace-up focus=false; }
+  Mod+Shift+U             { move-column-to-workspace-down; }
+  Mod+Shift+Y             { move-column-to-workspace-up; }
 
   Mod+1                   { focus-column-left; }
   Mod+2                   { focus-window-or-workspace-down; }
