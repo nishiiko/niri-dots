@@ -46,8 +46,6 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^org.keepassxc.KeePassXC$"# title=r#"^KeePassXC - Browser Access Request$"#
-  match app-id=r#"^org.keepassxc.KeePassXC$"# title=r#"^Unlock Database - KeePassXC$"#
   match app-id=r#"^org.kde.kdenlive$"# title=r#"^Splash Screen — Kdenlive$"#
   match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Picture-in-Picture$"#
   match app-id=r#"^org.fcitx.fcitx5-config-qt$"#
