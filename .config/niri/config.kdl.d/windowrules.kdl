@@ -1,4 +1,5 @@
 window-rule {
+  opacity 0.9
   draw-border-with-background false
 }
 
