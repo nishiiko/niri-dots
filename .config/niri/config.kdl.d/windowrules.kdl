@@ -13,13 +13,13 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^discord$"#
+  match app-id=r#"^discord|equibop$"#
   block-out-from "screen-capture"
 }
 
 window-rule {
   match app-id=r#"^com.obsproject.Studio$"#
-  match app-id=r#"^discord$"#
+  match app-id=r#"^discord|equibop$"#
   open-on-output "HDMI-A-1"
 }
 
@@ -39,7 +39,7 @@ window-rule {
   match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Mozilla Firefox$"#
   match app-id=r#"^com.obsproject.Studio$"# title=r#"^OBS *.*.*$"#
   match app-id=r#"^Alacritty$"#
-  match app-id=r#"^discord$"#
+  match app-id=r#"^discord|equibop$"#
   match app-id=r#"^spotify$"#
   match app-id=r#"^helium$"#
   default-column-width { proportion 0.66; }
