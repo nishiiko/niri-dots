@@ -7,8 +7,8 @@ window-rule {
 }
 
 blur {
-  passes 4
-  offset 4
+  passes 5
+  offset 2
   saturation 2
 }
 
