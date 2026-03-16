@@ -20,12 +20,11 @@ input {
     accel-profile "flat"
     scroll-factor 0.5
     // scroll-method "two-finger"
-    disabled-on-external-mouse
+    // disabled-on-external-mouse
   }
 
   tablet {
     map-to-output "DP-1"
-    left-handed
   }
 
   mouse {
