@@ -15,6 +15,7 @@ include "config.kdl.d/outputs.kdl"
 include "config.kdl.d/silly.kdl"
 
 layout {
+  always-center-single-column true
   center-focused-column "never"
   empty-workspace-above-first
   preset-column-widths {
@@ -52,9 +53,5 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%S.png"
 
 switch-events {
-  lid-close { spawn "sh" "-c" "hyprlock -c $HOME/.config/niri/extras/hyprlock.conf"; }
-}
-
-input {
-  disable-power-key-handling
+  lid-close { spawn "hyprlock" "-c" ".config/niri/extras/hyprlock.conf"; }
 }
