@@ -38,7 +38,7 @@ layout {
   tab-indicator {
     width 4
     length total-proportion=0.7
-    position "bottom"
+    position "left"
   }
 
   border {
