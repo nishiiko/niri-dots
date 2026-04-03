@@ -7,9 +7,8 @@ window-rule {
 }
 
 blur {
-  passes 5
-  offset 2
-  saturation 2
+  passes 4
+  offset 3.8
 }
 
 recent-windows {
