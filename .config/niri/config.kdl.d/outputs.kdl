@@ -7,7 +7,7 @@ output "eDP-1" {
 output "DP-1" {
   mode "2560x1440"
   position x=0 y=0
-  scale 1.333
+  scale 1.33
   focus-at-startup
   variable-refresh-rate
 }
