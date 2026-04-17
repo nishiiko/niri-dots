@@ -1,6 +1,7 @@
 window-rule {
   draw-border-with-background false
 }
+
 window-rule {
   exclude is-focused=true
   opacity 0.95
@@ -17,12 +18,13 @@ window-rule {
 
 window-rule {
   match app-id=r#"^discord$"#
-  block-out-from "screen-capture"
+  block-out-from "screencast"
 }
 
 window-rule {
   match app-id=r#"^com.obsproject.Studio$"#
   match app-id=r#"^discord$"#
+  match app-id=r#"^cinny$"#
   open-on-output "HDMI-A-1"
 }
 
@@ -77,6 +79,7 @@ window-rule {
 }
 window-rule {
   match app-id=r#"^discord$"#
+  match app-id=r#"^cinny$"#
   open-focused false
 }
 
