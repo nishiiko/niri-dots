@@ -17,11 +17,6 @@ recent-windows {
   }
 }
 
-cursor {
-  xcursor-theme "volantes_light_cursors"
-  xcursor-size 32
-}
-
 layout {
   gaps 16
 
