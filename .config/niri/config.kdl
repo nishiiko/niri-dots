@@ -32,7 +32,7 @@ layout {
 
 cursor {
   xcursor-theme "Bibata-Modern-Ice"
-  xcursor-size 24
+  xcursor-size 32
   hide-after-inactive-ms 2000
 }
 

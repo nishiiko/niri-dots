@@ -29,7 +29,7 @@ layer-rule {
 
 layer-rule {
   match namespace="^rofi$"
-  geometry-corner-radius 40
+  geometry-corner-radius 60
   shadow {
     on
   }
