@@ -1,42 +1,42 @@
 window-rule {
-  geometry-corner-radius 16
-  clip-to-geometry true
-  background-effect {
-    blur true
-  }
+	geometry-corner-radius 16
+	clip-to-geometry true
+	background-effect {
+		blur true
+	}
 }
 
 blur {
-  passes 4
-  offset 3.8
+	passes 4
+	offset 3.8
 }
 
 recent-windows {
-  highlight {
-    corner-radius 16
-  }
+	highlight {
+		corner-radius 16
+	}
 }
 
 layout {
-  gaps 16
+	gaps 16
 
-  shadow {
-    on
-    softness 5
-    spread 0
-    offset x=10 y=10
-    color "#1A1A1AAA"
-    inactive-color "#1A1A1AAA"
-  }
+	shadow {
+		on
+		softness 5
+		spread 0
+		offset x=10 y=10
+		color "#1A1A1AAA"
+		inactive-color "#1A1A1AAA"
+	}
 
-  tab-indicator {
-    width 4
-    length total-proportion=0.7
-    position "left"
-  }
+	tab-indicator {
+		width 4
+		length total-proportion=0.7
+		position "left"
+	}
 
-  border {
-    on
-    width 6
-  }
+	border {
+		on
+		width 6
+	}
 }

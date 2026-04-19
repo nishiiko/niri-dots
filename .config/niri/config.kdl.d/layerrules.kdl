@@ -1,36 +1,36 @@
 layer-rule {
-  background-effect {
-    blur true
-    xray false
-  }
+	background-effect {
+		blur true
+		xray false
+	}
 }
 
 layer-rule {
-  match namespace="^swaync-notification-window$"
-  match namespace="^swaync-control-center$"
-  block-out-from "screencast"
-  background-effect { // this will be temporary hopefully
-    blur false
-  }
+	match namespace="^swaync-notification-window$"
+	match namespace="^swaync-control-center$"
+	block-out-from "screencast"
+	background-effect { // this will be temporary hopefully
+		blur false
+	}
 }
 
 layer-rule {
-  match namespace="^swww-daemonblur$"
-  place-within-backdrop true
+	match namespace="^swww-daemonblur$"
+	place-within-backdrop true
 }
 
 layer-rule {
-  match namespace="^waybar$"
-  shadow {
-    on
-    offset x=0 y=10
-  }
+	match namespace="^waybar$"
+	shadow {
+		on
+		offset x=0 y=10
+	}
 }
 
 layer-rule {
-  match namespace="^rofi$"
-  geometry-corner-radius 60
-  shadow {
-    on
-  }
+	match namespace="^rofi$"
+	geometry-corner-radius 60
+	shadow {
+		on
+	}
 }

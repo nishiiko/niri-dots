@@ -15,48 +15,48 @@ include "config.kdl.d/outputs.kdl"
 include "config.kdl.d/silly.kdl"
 
 layout {
-  always-center-single-column true
-  center-focused-column "never"
-  empty-workspace-above-first
-  preset-column-widths {
-    proportion 0.5
-    proportion 0.66
-    proportion 1.0
-  }
-  default-column-width { proportion 0.5; }
+	always-center-single-column true
+	center-focused-column "never"
+	empty-workspace-above-first
+	preset-column-widths {
+		proportion 0.5
+		proportion 0.66
+		proportion 1.0
+	}
+	default-column-width { proportion 0.5; }
 
-  focus-ring {
-    off
-  }
+	focus-ring {
+		off
+	}
 }
 
 cursor {
-  xcursor-theme "Bibata-Modern-Ice"
-  xcursor-size 32
-  hide-after-inactive-ms 2000
+	xcursor-theme "Bibata-Modern-Ice"
+	xcursor-size 32
+	hide-after-inactive-ms 2000
 }
 
 gestures {
-  hot-corners {
-    off
-  }
+	hot-corners {
+		off
+	}
 }
 
 hotkey-overlay {
-  skip-at-startup
+	skip-at-startup
 }
 
 clipboard {
-  disable-primary
+	disable-primary
 }
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%S.png"
 
 switch-events {
-  lid-close { spawn "hyprlock" "-c" ".config/niri/extras/hyprlock.conf"; }
+	lid-close { spawn "hyprlock" "-c" ".config/niri/extras/hyprlock.conf"; }
 }
 
 debug {
-  honor-xdg-activation-with-invalid-serial
+	honor-xdg-activation-with-invalid-serial
 }

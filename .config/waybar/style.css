@@ -1,8 +1,8 @@
 * {
-  font-family: Maple Mono NF CN;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
+	font-family: Maple Mono NF CN;
+	font-size: 1.1rem;
+	font-weight: bold;
+	border: none;
 }
 
 @import "colours.css";
@@ -18,84 +18,84 @@
 #clock,
 #tray,
 #workspaces {
-  background-color: @module-bg;
-  border-radius: 500em;
-  border: 0.2em solid alpha(#000000, 0.6);
-  color: @active-text;
-  margin: 0.4em 0.25em;
-  padding: 0.3em 0.6em;
-  transition: all 0.4s cubic-bezier(0,0,.2,1)
+	background-color: @module-bg;
+	border-radius: 500em;
+	border: 0.2em solid alpha(#000000, 0.6);
+	color: @active-text;
+	margin: 0.4em 0.25em;
+	padding: 0.3em 0.6em;
+	transition: all 0.4s cubic-bezier(0,0,.2,1)
 }
 
 tooltip {
-  border-radius: 2em;
-  margin: 1em;
+	border-radius: 2em;
+	margin: 1em;
 }
 
 
 window#waybar {
-  background-color: alpha(@bar-bg, 0.75);
+	background-color: alpha(@bar-bg, 0.75);
 }
 
 button {
-  box-shadow: inset 0 -0.25em transparent;
-  border: none;
-  border-radius: 5em;
+	box-shadow: inset 0 -0.25em transparent;
+	border: none;
+	border-radius: 5em;
 }
 
 button:hover {
-  background: inherit;
+	background: inherit;
 }
 
 #workspaces button {
-  padding: 0em 0.2em;
-  margin: 0em 0em;
-  color: alpha(@inactive-text, 1);
-  transition: all 0.3s cubic-bezier(0,0,0.2,1)
+	padding: 0em 0.2em;
+	margin: 0em 0em;
+	color: alpha(@inactive-text, 1);
+	transition: all 0.3s cubic-bezier(0,0,0.2,1)
 }
 
 #workspaces button:hover {
-  color: alpha(@hover-text, 1);
+	color: alpha(@hover-text, 1);
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-  padding: 0em 1.5em;
-  margin: 0em 0em;
-  color: alpha(@active-text, 1);
-  background-color: @button-hl;
-  transition: all 0.3s cubic-bezier(0,0,.2,1)
+	padding: 0em 1.5em;
+	margin: 0em 0em;
+	color: alpha(@active-text, 1);
+	background-color: @button-hl;
+	transition: all 0.3s cubic-bezier(0,0,.2,1)
 }
 
 #workspaces button.urgent {
-  background-color: inherit;
+	background-color: inherit;
 }
 
 #battery.charging, #battery.plugged {
-  color: #BBFFBB;
+	color: #BBFFBB;
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-  color: #ba0000;
+	color: #ba0000;
 }
 
 
 #temperature.critical {
-  background-color: transparent;
-  color: #ba0000;
+	background-color: transparent;
+	color: #ba0000;
 }
 
 #taskbar.empty {
-  background: transparent;
-  border: transparent;
-  margin: 0em;
-  padding: 0em
+	background: transparent;
+	border: transparent;
+	margin: 0em;
+	padding: 0em
 }
 
 .modules-left {
-  margin-left: 1em;
+	margin-left: 1em;
 }
 .modules-right {
-  margin-right: 1em;
+	margin-right: 1em;
 }

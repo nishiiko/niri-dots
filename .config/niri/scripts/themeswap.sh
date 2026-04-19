@@ -8,9 +8,9 @@ until [ -d $PWD/$theme ]; do
 read -p "select theme from:
 $(ls)
 > " theme
-  
+
 if [ ! -d $PWD/$theme ]; then
-  echo bruh
+	echo bruh
 fi
 
 done

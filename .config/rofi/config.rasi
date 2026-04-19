@@ -52,7 +52,7 @@ listview {
 	lines: 6;
 }
 
-mode-switcher {	
+mode-switcher {
 	background-color: transparent;
 }
 
@@ -71,7 +71,7 @@ inputbar {
 	background-color: transparent;
 }
 prompt {
-	text-color: @active-text;	
+	text-color: @active-text;
 	background-color: transparent;
 }
 
