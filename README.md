@@ -4,7 +4,7 @@ yell at me in issues if something no worky\
 also my dots will probably not look exactly like the screenshots but it should probably be decently similar
 
 ## things you need (maybe):
-niri (duh)\
+[niri tearing fork](https://github.com/urayde/niri)\
 awww (formerly swww)\
 swaync\
 alacritty\
