@@ -8,8 +8,11 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^steam_app_"#
-	match app-id=r#"^osu!.exe$"#
+	match app-id=r#"^steam_app_\d+$"# is-focused=true
+	match app-id=r#".exe$"# is-focused=true
+
+	exclude app-id=r#"^steam_app_1426210$"#
+
 	allow-tearing true
 }
 
@@ -31,7 +34,7 @@ window-rule {
 	match app-id=r#"^com.obsproject.Studio$"#
 	match app-id=r#"^discord(-canary|)$"#
 	match app-id=r#"^cinny$"#
-	open-on-output "HDMI-A-1"
+	open-on-output "DP-2"
 }
 
 window-rule {
