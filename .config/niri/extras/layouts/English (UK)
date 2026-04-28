@@ -1,0 +1,82 @@
+binds {
+	Mod+Shift+Slash { show-hotkey-overlay; }
+
+	Mod+F hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+	Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
+	Mod+Ctrl+Shift+U hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock" "-c" ".config/niri/extras/hyprlock.conf"; }
+
+	XF86AudioRaiseVolume		allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "-l" "1"; }
+	XF86AudioLowerVolume		allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
+	XF86AudioMute						allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+	XF86AudioMicMute				allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+	XF86MonBrightnessDown		allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
+	XF86MonBrightnessUp			allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
+
+	Mod+N										{ spawn "swaync-client" "-t"; }
+
+	Mod+Apostrophe repeat=false			 { toggle-overview; }
+
+	Mod+Q										{ close-window; }
+
+	Mod+J										{ focus-column-left; }
+	Mod+K										{ focus-window-down; }
+	Mod+L										{ focus-window-up; }
+	Mod+semicolon						{ focus-column-right; }
+
+	Mod+Shift+J							{ move-column-left; }
+	Mod+Shift+K							{ move-window-down; }
+	Mod+Shift+L							{ move-window-up; }
+	Mod+Shift+semicolon			{ move-column-right; }
+
+	Mod+Ctrl+Shift+J				{ consume-or-expel-window-left; }
+	Mod+Ctrl+Shift+semicolon{ consume-or-expel-window-right; }
+
+	Mod+I										{ focus-workspace-down; }
+	Mod+O										{ focus-workspace-up; }
+	Mod+U										{ focus-monitor-left; }
+	Mod+P										{ focus-monitor-right; }
+	Mod+Shift+U							{ move-column-to-monitor-left; }
+	Mod+Shift+P							{ move-column-to-monitor-right; }
+	Mod+Shift+I							{ move-column-to-workspace-down; }
+	Mod+Shift+O							{ move-column-to-workspace-up; }
+
+	Mod+1										{ focus-column-left; }
+	Mod+2										{ focus-window-or-workspace-down; }
+	Mod+3										{ focus-window-or-workspace-up; }
+	Mod+4										{ focus-column-right; }
+	Mod+Shift+1							{ move-column-left; }
+	Mod+Shift+2							{ move-window-down-or-to-workspace-down; }
+	Mod+Shift+3							{ move-window-up-or-to-workspace-up; }
+	Mod+Shift+4							{ move-column-right; }
+	Mod+Ctrl+Shift+1				{ consume-or-expel-window-left; }
+	Mod+Ctrl+Shift+4				{ consume-or-expel-window-right; }
+
+	Mod+R										{ switch-preset-column-width; }
+	Mod+Shift+R							{ expand-column-to-available-width; }
+	Mod+E										{ fullscreen-window; }
+	Mod+Shift+E							{ toggle-windowed-fullscreen; }
+
+	Mod+X										{ center-column; }
+	Mod+Ctrl+X							{ center-visible-columns; }
+
+	Mod+Minus								{ set-column-width "-5%"; }
+	Mod+Equal								{ set-column-width "+5%"; }
+
+	Mod+Shift+Minus					{ set-window-height "-5%"; }
+	Mod+Shift+Equal					{ set-window-height "+5%"; }
+
+	Mod+W										{ toggle-window-floating; }
+	Mod+Shift+W							{ switch-focus-between-floating-and-tiling; }
+
+	Mod+V										{ toggle-column-tabbed-display; }
+
+	Mod+Control+Space				{ spawn ".config/niri/scripts/layout-swap.sh"; }
+	Mod+Ctrl+Shift+Space		{ spawn "fcitx5-remote" "-t"; }
+
+	Mod+Shift+S							{ screenshot show-pointer=false; }
+	Print										{ screenshot-screen show-pointer=false; }
+	Mod+Print								{ screenshot-window; }
+
+	Ctrl+Shift+Delete				{ quit; }
+}
