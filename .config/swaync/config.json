@@ -58,6 +58,10 @@
 			"app-name": "^niri$",
 			"summary": "^Screenshot captured$",
 			"override-urgency": "critical"
+		},
+		"layout-swap": {
+			"app-name": "^niri-script$",
+			"override-urgency": "critical"
 		}
 	},
 	"widgets": [
