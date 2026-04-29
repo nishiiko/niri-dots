@@ -1,4 +1,4 @@
-spawn-at-startup "dbus-update-activation-environment" "--all"
+spawn-at-startup "dbus-update-activation-environment" "--all" "--systemd"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 spawn-at-startup ".config/niri/scripts/vpn-watch.sh"
 spawn-at-startup ".config/niri/scripts/wallpaper.sh"
