@@ -4,6 +4,7 @@ window-rule {
 
 window-rule {
 	exclude app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"YouTube — Mozilla Firefox$"#
+	exclude app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"Twitch — Mozilla Firefox$"#
 	opacity 0.92
 }
 
