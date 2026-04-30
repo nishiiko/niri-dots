@@ -3,8 +3,8 @@ window-rule {
 }
 
 window-rule {
-	exclude is-focused=true
-	opacity 0.95
+	exclude app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"YouTube — Mozilla Firefox$"#
+	opacity 0.92
 }
 
 window-rule {
@@ -26,13 +26,13 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^discord(-canary|)$|^Legcord$"#
+	match app-id=r#"^discord(-canary|)$"#
 	block-out-from "screencast"
 }
 
 window-rule {
 	match app-id=r#"^com.obsproject.Studio$"#
-	match app-id=r#"^discord(-canary|)$|^Legcord$"#
+	match app-id=r#"^discord(-canary|)$"#
 	match app-id=r#"^cinny$"#
 	open-on-output "DP-2"
 }
@@ -54,7 +54,7 @@ window-rule {
 	match app-id=r#"^com.obsproject.Studio$"# title=r#"^OBS *.*.*$"#
 	match app-id=r#"^steam$"# title=r#"^Steam$"#
 	match app-id=r#"^OpenTabletDriver.UX.Gtk$"#
-	match app-id=r#"^discord(-canary|)$|^Legcord$"#
+	match app-id=r#"^discord(-canary|)$"#
 	match app-id=r#"^Alacritty$"#
 	match app-id=r#"^spotify$"#
 	match app-id=r#"^cinny$"#
@@ -90,7 +90,7 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^discord(-canary|)$|^Legcord$"#
+	match app-id=r#"^discord(-canary|)$"#
 	match app-id=r#"^cinny$"#
 	open-focused false
 }
