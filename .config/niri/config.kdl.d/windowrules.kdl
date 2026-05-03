@@ -9,9 +9,9 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^tetrio-desktop$"#
-	match app-id=r#"^steam_app_\d+$"#
-	match app-id=r#".exe$"#
+	match app-id=r#"^tetrio-desktop$"# is-focused=true
+	match app-id=r#"^steam_app_\d+$"# is-focused=true
+	match app-id=r#".exe$"# is-focused=true
 
 	exclude app-id=r#"^steam_app_1426210$"# //it takes two
 

@@ -15,5 +15,5 @@ output "GIGA-BYTE TECHNOLOGY CO., LTD. GS27QA 0x01010101" {
 output "Samsung Electric Company LF27T450F HK2T100145" {
 	mode "1920x1080"
 	position x=2560 y=0
-	scale 0.75
+	scale 1
 }
