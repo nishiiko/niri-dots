@@ -9,8 +9,9 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^steam_app_\d+$"# is-focused=true
-	match app-id=r#".exe$"# is-focused=true
+	match app-id=r#"^tetrio-desktop$"#
+	match app-id=r#"^steam_app_\d+$"#
+	match app-id=r#".exe$"#
 
 	exclude app-id=r#"^steam_app_1426210$"# //it takes two
 
@@ -57,7 +58,7 @@ window-rule {
 	match app-id=r#"^OpenTabletDriver.UX.Gtk$"#
 	match app-id=r#"^discord(-canary|)$"#
 	match app-id=r#"^Alacritty$"#
-	match app-id=r#"^spotify$"#
+	match app-id=r#"^[Ss]potify$"#
 	match app-id=r#"^cinny$"#
 	default-column-width { proportion 0.66; }
 }

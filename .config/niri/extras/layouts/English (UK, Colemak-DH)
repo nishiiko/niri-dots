@@ -78,5 +78,9 @@ binds {
 	Print										{ screenshot-screen show-pointer=false; }
 	Mod+Print								{ screenshot-window; }
 
+	Mod+F10									{ set-dynamic-cast-window; }
+	Mod+F11									{ set-dynamic-cast-monitor; }
+	Mod+F12									{	clear-dynamic-cast-target;}
+
 	Ctrl+Shift+Delete				{ quit; }
 }
