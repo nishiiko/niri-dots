@@ -28,13 +28,13 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^discord(-canary|)$"#
+	match app-id=r#"^discord|equibop$"#
 	block-out-from "screencast"
 }
 
 window-rule {
 	match app-id=r#"^com.obsproject.Studio$"#
-	match app-id=r#"^discord(-canary|)$"#
+	match app-id=r#"^discord|equibop$"#
 	match app-id=r#"^cinny$"#
 	open-on-output "DP-2"
 }
@@ -56,7 +56,7 @@ window-rule {
 	match app-id=r#"^com.obsproject.Studio$"# title=r#"^OBS *.*.*$"#
 	match app-id=r#"^steam$"# title=r#"^Steam$"#
 	match app-id=r#"^OpenTabletDriver.UX.Gtk$"#
-	match app-id=r#"^discord(-canary|)$"#
+	match app-id=r#"^discord|equibop$"#
 	match app-id=r#"^Alacritty$"#
 	match app-id=r#"^[Ss]potify$"#
 	match app-id=r#"^cinny$"#
@@ -92,7 +92,7 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^discord(-canary|)$"#
+	match app-id=r#"^discord|equibop$"#
 	match app-id=r#"^cinny$"#
 	open-focused false
 }
