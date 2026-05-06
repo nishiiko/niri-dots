@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sleep 0.1s
 
-until $visible; do
+while true; do
 	pkill -x waybar
 	waybar &
 	for i in {1..30}; do
