@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 sleep 0.1s
-visible=false
 
 until $visible; do
 	pkill -x waybar
@@ -10,8 +9,7 @@ until $visible; do
 		if niri msg --json layers \
 			| jq '.[].namespace' \
 			| grep waybar; then
-			visible=true
-			break 1
+			break 2
 		fi
 	done
 	continue
