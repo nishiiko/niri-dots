@@ -15,7 +15,7 @@ layer-rule {
 }
 
 layer-rule {
-	match namespace="^swww-daemonblur$"
+	match namespace="^awww-daemonblur$"
 	place-within-backdrop true
 }
 
