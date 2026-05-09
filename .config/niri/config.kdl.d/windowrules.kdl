@@ -9,16 +9,6 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^tetrio-desktop$"# is-focused=true
-	match app-id=r#"^steam_app_\d+$"# is-focused=true
-	match app-id=r#".exe$"# is-focused=true
-
-	exclude app-id=r#"^steam_app_1426210$"# //it takes two
-
-	allow-tearing true
-}
-
-window-rule {
 	match is-floating=true
 	exclude app-id="steam" title=r#"^notificationtoasts_d+_desktop$"#
 	background-effect {
