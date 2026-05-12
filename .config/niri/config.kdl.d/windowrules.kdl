@@ -4,7 +4,7 @@ window-rule {
 
 window-rule {
 	match app-id=r#"^steam_app_\d+$"# is-focused=true
-
+	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
 	variable-refresh-rate true
 }
 
@@ -16,7 +16,7 @@ window-rule {
 
 window-rule {
 	match is-floating=true
-	exclude app-id="steam" title=r#"^notificationtoasts_d+_desktop$"#
+	exclude app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
 	background-effect {
 		xray false
 	}
@@ -82,7 +82,7 @@ window-rule {
 }
 
 window-rule {
-	match app-id="steam" title=r#"^notificationtoasts_d+_desktop$"#
+	match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
 	default-floating-position x=10 y=10 relative-to="bottom-right"
 	open-focused false
 }
