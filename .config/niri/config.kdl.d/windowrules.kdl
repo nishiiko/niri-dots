@@ -5,6 +5,7 @@ window-rule {
 window-rule {
 	match app-id=r#"^steam_app_\d+$"# is-focused=true
 	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
+	match app-id=r#"^tetrio-desktop$"# is-focused=true
 	variable-refresh-rate true
 }
 
