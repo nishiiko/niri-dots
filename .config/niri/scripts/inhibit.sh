@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 
-streams=0
+casts=0
 
 while read -r line; do
 
-	if echo $line | grep "Closed"; then
-		((streams--))
-	elif echo $line | grep "PipeWireStreamAdded"; then
-		((streams++))
+	if [[ "$line" == true ]]; then
+		((casts++))
+	else
+		((casts--))
 	fi
 
-	if (($streams > 0)); then
+	if (($casts > 0)); then
 		swaync-client --inhibitor-add "xdg-desktop-portal-gnome"
+		echo 'WATCH OUT YOURE SCREENSHARING'
 		continue
 	fi
-
+	echo 'hi'
 	swaync-client --inhibitor-remove "xdg-desktop-portal-gnome"
 
-done < <(dbus-monitor --session "sender='org.gnome.Mutter.ScreenCast',type='signal'" | grep --line-buffered member)
+done < <(niri msg --json event-stream | jq -rc --unbuffered 'select(.CastStartedOrChanged) | .CastStartedOrChanged.cast.is_active')

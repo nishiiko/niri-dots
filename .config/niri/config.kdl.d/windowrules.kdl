@@ -1,4 +1,9 @@
 window-rule {
+	match title=r#"^Picture in Picture$"#
+	opacity 0.5
+}
+
+window-rule {
 	draw-border-with-background false
 }
 
