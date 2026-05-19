@@ -4,10 +4,10 @@ configuration {
 	modi: "drun,run,emoji";
 
 	sort: true;
-	history: false;
-	case-sensitivity: false;
 	sorting-method: "fzf";
 	matching: "fuzzy";
+	disable-history: true;
+	case-sensitivity: false;
 	hide-scrollbar: true;
 	terminal: "alacritty";
 	sidebar-mode: true;
