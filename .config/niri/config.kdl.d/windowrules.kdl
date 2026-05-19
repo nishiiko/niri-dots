@@ -1,9 +1,4 @@
 window-rule {
-	match title=r#"^Picture in Picture$"#
-	opacity 0.5
-}
-
-window-rule {
 	draw-border-with-background false
 }
 
@@ -33,7 +28,7 @@ window-rule {
 
 window-rule {
 	match app-id=r#"^discord$"#
-	block-out-from "screencast"
+	block-out-from "screen-capture"
 }
 
 window-rule {

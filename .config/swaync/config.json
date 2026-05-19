@@ -38,11 +38,11 @@
 	"script-fail-notify": true,
 	"scripts": {
 		"Sound": {
-			"exec": "bash -c '$HOME/.config/swaync/scripts/notification.sh'",
+			"exec": "sh -c '$HOME/.config/swaync/scripts/notification.sh'",
 			"urgency": "Normal"
 		},
 		"sound2": {
-			"exec": "bash -c 'paplay $HOME/.config/swaync/se_elevator_ding.ogg'",
+			"exec": "sh -c 'pw-cat -p $HOME/.config/swaync/se_elevator_ding.ogg'",
 			"app-name": "^niri$",
 			"summary": "^Screenshot captured$",
 			"urgency": "Critical"
