@@ -9,6 +9,6 @@ else
   until mullvad status --json | grep connecting; do
     :
   done
-    read -r country city <<< $(mullvad status --json | jq -rj '.details.location | .country, " ", .city' | tr '\n' ' ')
+  read -r country city <<< $(mullvad status --json | jq -rj '.details.location | .country, " ", .city' | tr '\n' ' ')
   notify-send "VPN State" "Connecting to $country, $city..." -ae niri-script
 fi

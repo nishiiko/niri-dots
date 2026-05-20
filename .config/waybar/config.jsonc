@@ -106,6 +106,7 @@
 		"on-click": "$HOME/.config/waybar/scripts/toggle.sh",
 		"tooltip": false,
 		"exec": "$HOME/.config/waybar/scripts/vpn.sh",
+		"exec-on-event": false,
 		"return-type": "json",
 		"signal": 8,
 		"format-icons": ["  ","  "]
