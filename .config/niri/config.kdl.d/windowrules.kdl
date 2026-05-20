@@ -68,6 +68,7 @@ window-rule {
 	match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Picture-in-Picture$"#
 	match app-id=r#"^org.fcitx.fcitx5-config-qt$"#
 	match app-id=r#"^org.pulseaudio.pavucontrol$"#
+	match app-id=r#"^com.saivert.pwvucontrol$"#
 	match app-id=r#"^org.twosheds.iwgtk$"#
 	match app-id=r#"^org.gnome.Nautilus$"#
 	match app-id=r#"^blueman-manager$"#

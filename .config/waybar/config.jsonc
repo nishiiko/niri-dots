@@ -103,7 +103,7 @@
 
 	"custom/vpn": {
 		"format": "{icon} {text} ",
-		"on-click": "sh -c 'mullvad status | grep Disconnected &>/dev/null && mullvad connect || mullvad disconnect'",
+		"on-click": "$HOME/.config/waybar/scripts/toggle.sh",
 		"tooltip": false,
 		"exec": "$HOME/.config/waybar/scripts/vpn.sh",
 		"return-type": "json",
@@ -126,6 +126,6 @@
 			"car": " ",
 			"default": [" ", " ", " "]
 		},
-		"on-click": "pkill pavucontrol ; pavucontrol"
+		"on-click": "pkill pwvucontrol ; pwvucontrol"
 	}
 }
