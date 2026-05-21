@@ -1,5 +1,6 @@
 // -*- mode: jsonc -*-
 {
+	"output": "DP-1",
 	"layer": "top", // Waybar at top layer
 	// "height": 54, // Waybar height (to be removed for auto height)
 	// "width": 1920, // Waybar width
