@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+lockdir=$HOME/.cache/vpn.lock
+
+if [ -e $lockdir ]; then
+	exit
+fi
+
+mkdir $lockdir
+trap 'rmdir $lockdir &>/dev/null' EXIT
+
 vpn_ip=
 sleep 0.2s
 
