@@ -14,5 +14,3 @@ while true; do
 	done
 	continue
 done
-
-pkill -RTMIN+8 waybar
