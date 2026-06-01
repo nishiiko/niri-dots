@@ -13,4 +13,4 @@ if ! grep -r systemd /sbin/init \
 	wireplumber &
 fi
 sleep 0.5s
-paplay --volume=65535 $HOME/.config/niri/scripts/assets/heal.wav &
+pw-cat -p $HOME/.config/niri/scripts/assets/heal.wav &
