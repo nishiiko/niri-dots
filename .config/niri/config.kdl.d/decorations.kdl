@@ -1,12 +1,12 @@
 window-rule {
 	geometry-corner-radius 16
 	clip-to-geometry true
-	background-effect {
+	/-background-effect {
 		blur true
 	}
 }
 
-blur {
+/-blur {
 	passes 4
 	offset 3.8
 }
