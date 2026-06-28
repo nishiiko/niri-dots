@@ -23,7 +23,7 @@ window-rule {
 	background-effect {
 		xray false
 	}
-	baba-is-float true
+	// baba-is-float true
 }
 
 window-rule {
