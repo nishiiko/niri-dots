@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 
-if ! grep -r systemd /sbin/init \
-	&& ! ls /usr/bin/ | grep openrc-init; then
-	pkill -x pipewire\|pipewire-pulse\|wireplumber
-
-	pidwait -x pipewire\|pipewire-pulse\|wireplumber
-
-	pipewire &
-	pipewire-pulse &
-
-	sleep 1s
-	wireplumber &
+if ! grep -r systemd /sbin/init; then
+	# && ! ls /usr/bin/ | grep openrc-init; then
+	gentoo-pipewire-launcher &
 fi
 sleep 0.5s
 pw-cat -p $HOME/.config/niri/scripts/assets/heal.wav &

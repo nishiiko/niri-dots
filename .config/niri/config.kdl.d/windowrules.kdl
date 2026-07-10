@@ -3,10 +3,23 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^steam_app_\d+$"# is-focused=true
 	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
 	match app-id=r#"^tetrio-desktop$"# is-focused=true
+	match app-id=r#"^steam_app_\d+$"# is-focused=true
+	match app-id=r#".exe$"# is-focused=true
+
 	variable-refresh-rate true
+}
+
+window-rule {
+	match app-id=r#"^org.vinegarhq.Sober$"#
+	match app-id=r#"^tetrio-desktop$"#
+	match app-id=r#"^steam_app_\d+$"#
+	match app-id=r#".exe$"#
+
+	exclude app-id=r#"osu!.exe"#
+
+	open-fullscreen true
 }
 
 /-window-rule {
@@ -36,11 +49,6 @@ window-rule {
 	match app-id=r#"^discord$"#
 	match app-id=r#"^cinny$"#
 	open-on-output "DP-2"
-}
-
-window-rule {
-	match app-id=r#"^steam_app_\d+$"#
-	open-fullscreen true
 }
 
 window-rule {
@@ -114,10 +122,24 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^osu!.exe$"# title=r#"^osu! \(loading\)$"#
-  geometry-corner-radius 999
-  baba-is-float false
-  border {
-    off
-  }
+	match app-id=r#"^windowkill$"#
+	geometry-corner-radius 0
+	border {
+		off
+	}
+	open-maximized-to-edges true
+}
+
+window-rule {
+	match app-id=r#"^osu!.exe$"# title=r#"^osu! \(loading\)$"#
+	geometry-corner-radius 999
+	open-fullscreen false
+	baba-is-float false
+	open-focused false
+	shadow {
+		off
+	}
+	border {
+		off
+	}
 }
