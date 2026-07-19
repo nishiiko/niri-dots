@@ -2,6 +2,26 @@
 	font-family: "Maple Mono NF CN";
 }
 
+:root {
+	--notification-icon-size: 5rem;
+	--notification-app-icon-size: calc(var(--notification-icon-size) / 3);
+	--notification-group-icon-size: 2rem;
+
+	--border-size: 0.375rem;
+	--border-radius: 1.25rem;
+
+	--notification-shadow: 0.5rem 0.5rem 0.3rem #1A1A1AAA;
+
+	--font-size-body: 1.25rem;
+	--font-size-summary: 1.45rem;
+
+	--hover-tranistion: background 0.15s ease-in-out;
+	--group-collapse-tranistion: opacity 400ms easi-in-out;
+	--hover-transition: var(--hover-tranistion);
+	--group-collapse-transition: var(--group-collapse-tranistion);
+	--font-size-time: 1rem;
+}
+
 @import "colours.css";
 
 notificationwindow, blankwindow, blankwindow {

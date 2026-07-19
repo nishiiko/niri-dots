@@ -13,7 +13,6 @@ window-rule {
 
 window-rule {
 	match app-id=r#"^org.vinegarhq.Sober$"#
-	match app-id=r#"^tetrio-desktop$"#
 	match app-id=r#"^steam_app_\d+$"#
 	match app-id=r#".exe$"#
 

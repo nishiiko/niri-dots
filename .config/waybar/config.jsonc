@@ -4,7 +4,7 @@
 	"layer": "top", // Waybar at top layer
 	// "height": 54, // Waybar height (to be removed for auto height)
 	// "width": 1920, // Waybar width
-	"position": "top", // Waybar position (top|bottom|left|right)
+	"position": "bottom", // Waybar position (top|bottom|left|right)
 	"spacing": 4, // Gaps between modules (4px)
 	"margin-top": 0,
 	"margin-bottom": 0,
@@ -49,7 +49,7 @@
 	},
 
 	"tray": {
-		"icon-size": 32,
+		"icon-size": 28,
 		"spacing": 8
 	},
 
