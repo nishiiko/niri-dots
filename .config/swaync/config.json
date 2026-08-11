@@ -18,7 +18,7 @@
 	"notification-body-image-height": 150,
 	"notification-body-image-width": 300,
 	"notification-window-width": 600,
-	"notification-window-height": 400,
+	"notification-window-height": 1440,
 	"notification-window-preferred-output": "DP-1",
 	"control-center-preferred-output": "DP-1",
 	"timeout": 5,
