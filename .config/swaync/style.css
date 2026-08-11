@@ -3,23 +3,27 @@
 }
 
 :root {
-	--notification-icon-size: 5rem;
+	--notification-icon-size: 4.5rem;
 	--notification-app-icon-size: calc(var(--notification-icon-size) / 3);
 	--notification-group-icon-size: 2rem;
 
 	--border-size: 0.375rem;
 	--border-radius: 1.25rem;
 
-	--notification-shadow: 0.5rem 0.5rem 0.3rem #1A1A1AAA;
+	--notification-shadow: 0.4rem 0.4rem 0.3rem #1A1A1AAA;
 
-	--font-size-body: 1.25rem;
-	--font-size-summary: 1.45rem;
+	--font-size-body: 1rem;
+	--font-size-summary: 1.2rem;
 
 	--hover-tranistion: background 0.15s ease-in-out;
 	--group-collapse-tranistion: opacity 400ms easi-in-out;
 	--hover-transition: var(--hover-tranistion);
 	--group-collapse-transition: var(--group-collapse-tranistion);
 	--font-size-time: 1rem;
+
+	--general-font-size: 1.1rem;
+	--general-emphasise-font-size: 1.25rem;
+	--general-font-size-title: 1.5rem;
 }
 
 @import "colours.css";
@@ -361,7 +365,7 @@ notificationwindow, blankwindow, blankwindow {
 /* Title widget */
 .widget-title > label {
 	margin-right: 8px;
-	font-size: 1.5rem;
+	font-size: var(--general-font-size);
 }
 
 .widget-title > button {
@@ -373,7 +377,7 @@ notificationwindow, blankwindow, blankwindow {
 .widget-dnd label {
 	color: var(--text-color);
 	margin-right: 8px;
-	font-size: 1.1rem;
+	font-size: var(--general-font-size);
 }
 
 .widget-dnd switch {
@@ -393,7 +397,7 @@ notificationwindow, blankwindow, blankwindow {
 
 /* Label widget */
 .widget-label > label {
-	font-size: 1.1rem;
+	font-size: var(--general-font-size);
 }
 
 /* Mpris widget */
@@ -437,11 +441,11 @@ notificationwindow, blankwindow, blankwindow {
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
 	font-weight: bold;
-	font-size: 1.25rem;
+	font-size: var(--general-emphasise-font-size);
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
-	font-size: 1.1rem;
+	font-size: var(--general-font-size);
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button {
@@ -548,7 +552,7 @@ notificationwindow, blankwindow, blankwindow {
 /* Inhibitors widget */
 .widget-inhibitors > label {
 	margin-right: 8px;
-	font-size: 1.5rem;
+	font-size: var(--general-font-size-title);
 }
 
 .widget-inhibitors > button {

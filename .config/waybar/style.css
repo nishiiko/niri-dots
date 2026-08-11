@@ -1,6 +1,6 @@
 * {
 	font-family: Maple Mono NF CN;
-	font-size: 20px;
+	font-size: 1rem;
 	font-weight: bold;
 	border: none;
 }
@@ -22,9 +22,9 @@
 	border-radius: 500rem;
 	border: 0.2rem solid alpha(#000000, 0.6);
 	color: @active-text;
-	margin: 0.4rem 0.25rem;
-	padding: 0.3rem 0.6rem;
-	transition: all 0.4s cubic-bezier(0,0,.2,1)
+	margin: 0.3rem 0.25rem;
+	padding: 0.2rem 0.7rem;
+	transition: all 0.3s cubic-bezier(0,0,0.2,1)
 }
 
 tooltip {
@@ -60,11 +60,11 @@ button:hover {
 
 #workspaces button.active,
 #workspaces button.focused {
-	padding: 0rem 1.5rem;
+	padding: 0rem 1rem;
 	margin: 0rem 0rem;
 	color: alpha(@active-text, 1);
 	background-color: @button-hl;
-	transition: all 0.3s cubic-bezier(0,0,.2,1)
+	transition: all 0.3s cubic-bezier(0,0,0.2,1)
 }
 
 #workspaces button.urgent {
