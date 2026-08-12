@@ -3,21 +3,20 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
-	match app-id=r#"^tetrio-desktop$"# is-focused=true
-	match app-id=r#"^steam_app_\d+$"# is-focused=true
-	match app-id=r#".exe$"# is-focused=true
-
-	variable-refresh-rate true
-}
-
-window-rule {
 	match app-id=r#"^steam_app_\d+$"# is-focused=true
 	match app-id=r#"^osu!$"# is-focused=true
 	match app-id=r#".exe$"# is-focused=true
 
-	variable-refresh-rate false
 	allow-tearing true
+}
+
+window-rule {
+	match app-id=r#"^riftfishing-win64-shipping.exe$"# is-focused=true
+	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
+	match app-id=r#"^tetrio-desktop$"# is-focused=true
+
+	variable-refresh-rate true
+	allow-tearing false
 }
 
 /-window-rule {
