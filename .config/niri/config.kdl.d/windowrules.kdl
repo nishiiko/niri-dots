@@ -13,6 +13,9 @@ window-rule {
 window-rule {
 	match app-id=r#"^riftfishing-win64-shipping.exe$"# is-focused=true
 	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
+	match app-id=r#"^steam_app_1259790$"# is-focused=true //ppt2
+	match app-id=r#"^steam_app_728880$"# is-focused=true //overcooked 2
+	match app-id=r#"^trackmania.exe$"# is-focused=true
 	match app-id=r#"^tetrio-desktop$"# is-focused=true
 
 	variable-refresh-rate true
