@@ -1,8 +1,5 @@
 window-rule {
-	draw-border-with-background false
-}
-
-window-rule {
+	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
 	match app-id=r#"^steam_app_\d+$"# is-focused=true
 	match app-id=r#"^osu!$"# is-focused=true
 	match app-id=r#".exe$"# is-focused=true
@@ -10,24 +7,17 @@ window-rule {
 	allow-tearing true
 }
 
-window-rule {
+/-window-rule {
 	match app-id=r#"^riftfishing-win64-shipping.exe$"# is-focused=true
 	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
 	match app-id=r#"^steam_app_1259790$"# is-focused=true //ppt2
+	match app-id=r#"^steam_app_1966720$"# is-focused=true //lethal
 	match app-id=r#"^steam_app_728880$"# is-focused=true //overcooked 2
 	match app-id=r#"^trackmania.exe$"# is-focused=true
 	match app-id=r#"^tetrio-desktop$"# is-focused=true
 
 	variable-refresh-rate true
 	allow-tearing false
-}
-
-/-window-rule {
-	exclude app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"YouTube — Mozilla Firefox$"#
-	exclude app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"Twitch — Mozilla Firefox$"#
-	exclude app-id=r#"^helium$"# title=r#"YouTube - Helium$"#
-	exclude app-id=r#"^helium$"# title=r#"Twitch - Helium$"#
-	opacity 0.92
 }
 
 window-rule {

@@ -1,14 +1,30 @@
 window-rule {
 	geometry-corner-radius 16
 	clip-to-geometry true
-	/-background-effect {
+	draw-border-with-background false
+	background-effect {
 		blur true
 	}
 }
 
-/-blur {
-	passes 4
-	offset 3.8
+window-rule {
+	match is-floating=true
+	background-effect {
+		xray false
+	}
+}
+
+blur {
+	passes 3
+	offset 4
+	noise 0
+}
+
+window-rule {
+	exclude app-id=r#"^helium$"# title=r#"YouTube - Helium$"#
+	exclude app-id=r#"^helium$"# title=r#"Twitch - Helium$"#
+	exclude app-id=r#"^Alacritty$"#
+	opacity 0.95
 }
 
 recent-windows {
