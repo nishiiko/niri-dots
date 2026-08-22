@@ -15,7 +15,7 @@ window-rule {
 }
 
 blur {
-	passes 3
+	passes 4
 	offset 4
 	noise 0
 }
