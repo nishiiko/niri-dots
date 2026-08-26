@@ -9,6 +9,7 @@ spawn-at-startup ".config/niri/scripts/waybar.sh"
 
 spawn-at-startup "openrgb" "--startminimized" "-p" "a"
 spawn-at-startup "iwgtk" "--gapplication-service"
+spawn-at-startup "gentoo-pipewire-launcher"
 spawn-at-startup "rmdir" ".cache/vpn.lock"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "otd-daemon"
