@@ -55,7 +55,8 @@ binds {
 	Mod+R										{ switch-preset-column-width; }
 	Mod+Shift+R							{ expand-column-to-available-width; }
 	Mod+E										{ fullscreen-window; }
-	Mod+Shift+E							{ toggle-windowed-fullscreen; }
+	Mod+Shift+E							{ maximize-window-to-edges; }
+	Mod+Ctrl+E							{ toggle-windowed-fullscreen; }
 
 	Mod+X										{ center-column; }
 	Mod+Ctrl+X							{ center-visible-columns; }

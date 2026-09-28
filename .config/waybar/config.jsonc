@@ -56,7 +56,8 @@
 	"clock": {
 		"tooltip": false,
 		"interval": 1,
-		"format": "{:%y/%m/%d - %H:%M:%S}"
+		"format": "{:%A, %d %b. %Y - %R:%S}",
+		"format-alt": "{:%d/%m/%y - %R:%S}"
 	},
 
 	"cpu": {
