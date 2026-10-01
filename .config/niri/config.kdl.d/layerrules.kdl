@@ -31,6 +31,10 @@ layer-rule {
 layer-rule {
 	match namespace="^rofi$"
 	geometry-corner-radius 60
+	background-effect {
+		blur true
+		xray false
+	}
 	shadow {
 		on
 	}

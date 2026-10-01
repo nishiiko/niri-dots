@@ -59,5 +59,6 @@ switch-events {
 }
 
 debug {
+	vulkan-renderer
 	honor-xdg-activation-with-invalid-serial
 }
