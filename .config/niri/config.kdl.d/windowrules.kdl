@@ -7,7 +7,7 @@ window-rule {
 	allow-tearing true
 }
 
-/-window-rule {
+window-rule {
 	match app-id=r#"^riftfishing-win64-shipping.exe$"# is-focused=true
 	match app-id=r#"^org.vinegarhq.Sober$"# is-focused=true
 	match app-id=r#"^steam_app_1259790$"# is-focused=true //ppt2
@@ -26,7 +26,7 @@ window-rule {
 	background-effect {
 		xray false
 	}
-	baba-is-float true
+	// baba-is-float true
 }
 
 window-rule {

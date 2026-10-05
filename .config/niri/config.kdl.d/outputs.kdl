@@ -9,7 +9,7 @@ output "GIGA-BYTE TECHNOLOGY CO., LTD. GS27QA 0x01010101" {
 	position x=0 y=0
 	scale 1
 	focus-at-startup
-	variable-refresh-rate
+	variable-refresh-rate on-demand=true
 }
 
 output "Samsung Electric Company LF27T450F HK2T100145" {
