@@ -15,3 +15,5 @@ spawn-at-startup "blueman-applet"
 spawn-at-startup "otd-daemon"
 spawn-at-startup "fcitx5"
 spawn-at-startup "swaync"
+
+spawn-at-startup "bash" "-c" "sleep 1s ; $HOME/.config/niri/scripts/layout-swap.sh"

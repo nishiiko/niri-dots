@@ -72,7 +72,7 @@ binds {
 
 	Mod+V										{ toggle-column-tabbed-display; }
 
-	Mod+Control+Space				{ spawn ".config/niri/scripts/layout-swap.sh"; }
+	Mod+Control+Space	repeat=false			{ spawn ".config/niri/scripts/layout-swap.sh"; }
 	Mod+Ctrl+Shift+Space		{ spawn "fcitx5-remote" "-t"; }
 
 	Mod+Shift+R							{ screenshot show-pointer=false; }

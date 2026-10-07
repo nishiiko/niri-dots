@@ -3,7 +3,7 @@ input {
 	focus-follows-mouse
 	keyboard {
 		xkb {
-			layout "gb(colemak_dh),gb"
+			layout "gb,gb(colemak_dh)"
 			options "caps:ctrl_shifted_capslock,altwin:swap_lalt_lwin"
 		}
 		numlock
