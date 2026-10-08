@@ -16,4 +16,4 @@ spawn-at-startup "otd-daemon"
 spawn-at-startup "fcitx5"
 spawn-at-startup "swaync"
 
-spawn-at-startup "bash" "-c" "sleep 1s ; $HOME/.config/niri/scripts/layout-swap.sh"
+spawn-at-startup "sh" "-c" "$HOME/.config/niri/scripts/layout-swap.sh"
