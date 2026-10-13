@@ -1,4 +1,4 @@
-@define-color bar-bg #42574F;
+@define-color bar-bg rgba(66, 87, 79, 0.75);
 
 @define-color inactive-text #BBBBBB;
 @define-color hover-text #CCCCCC;

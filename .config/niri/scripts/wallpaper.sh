@@ -1,1 +1,1 @@
-../themes/omori/wallpaper.sh
+../themes/space/wallpaper.sh

@@ -1,0 +1,12 @@
+layout {
+	tab-indicator {
+		active-color "#FFAAFF"
+		inactive-color "#6D5D96"
+	}
+
+	border {
+		active-color "#707070"
+		inactive-color "#424242"
+		urgent-color "9B0000"
+	}
+}
