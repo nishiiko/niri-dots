@@ -1,12 +1,10 @@
 {
     "$schema": "$HOME/.config/fastfetch/json_schema.json",
     "logo": {
-		"source": "$HOME/.config/fastfetch/mewo.txt",
-        "type": "auto",
-		"color": {
-			"1": "magenta"
-    	}
-	},
+    "source": "$HOME/.config/fastfetch/space.sixel",
+        "type": "raw",
+        "width": 20
+  },
     "display": {
         "key": {
             "width": 11
@@ -16,31 +14,32 @@
             "char.Total": "-",
             "width": 9
         },
+        "color": "#FFFFFF",
         "percent": {
             "type": 2 
         }
     },
     "modules": [
-		"title",
+        "title",
         "separator",
-		"wm",
+        "wm",
         {
             "type": "command",
             "key": "OS Age",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
-		{
-			"type": "os",
-			"key": "Distro"
-		},
-		"kernel",
+    {
+      "type": "os",
+      "key": "Distro"
+    },
+        "kernel",
         "packages",
-		"memory",
+        "memory",
         {
             "type": "disk",
             "folders": "/",
-			"key": "Storage"
-		},
+      "key": "Storage"
+    },
         {
             "type": "colors",
             "symbol": "circle"
