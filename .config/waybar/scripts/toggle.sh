@@ -6,7 +6,7 @@ if [ "$state" = "connected" ]; then
   notify-send "VPN State" "Disconnected from $country, $city" -ae niri-script
 else
   mullvad connect
-  until mullvad status --json | grep connecting; do
+  until mullvad status --json | grep connect; do
     :
   done
   read -r country city <<< $(mullvad status --json | jq -rj '.details.location | .country, " ", .city' | tr '\n' ' ')
