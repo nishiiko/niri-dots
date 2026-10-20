@@ -1,6 +1,7 @@
 window-rule {
 	match app-id=r#"^org.vinegarhq.Sober$"#
 	match app-id=r#"^steam_app_\d+$"#
+	match app-id=r#"^steam$"#
 	match app-id=r#"^osu!$"#
 	match app-id=r#".exe$"#
 
