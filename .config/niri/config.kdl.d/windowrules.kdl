@@ -6,6 +6,7 @@ window-rule {
 	match app-id=r#".exe$"#
 
 	open-on-workspace "gamer"
+	open-focused false
 }
 
 window-rule {
