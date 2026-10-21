@@ -11,7 +11,7 @@ window-rule {
 
 window-rule {
 	match app-id=r#"^discord$"#
-	match app-id=r#"^firefox$"#
+	match app-id=r#"^firefox-bin$"#
 	match app-id=r#"^helium$"#
 
 	open-on-workspace "web"
@@ -69,7 +69,7 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Mozilla Firefox$"#
+	match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Mozilla firefox-bin$"#
 	match app-id=r#"^com.obsproject.Studio$"# title=r#"^OBS *.*.*$"#
 	match app-id=r#"^steam$"# title=r#"^Steam$"#
 	match app-id=r#"^OpenTabletDriver.UX.Gtk$"#
