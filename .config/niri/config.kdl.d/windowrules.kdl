@@ -1,17 +1,17 @@
 window-rule {
 	match app-id=r#"^org.vinegarhq.Sober$"#
+	match app-id=r#"^dev.eden_emu.eden$"#
 	match app-id=r#"^steam_app_\d+$"#
 	match app-id=r#"^steam$"#
 	match app-id=r#"^osu!$"#
 	match app-id=r#".exe$"#
 
 	open-on-workspace "gamer"
-	open-focused false
 }
 
 window-rule {
+	match app-id=r#"^[Ff]irefox(-esr|-bin|)$"#
 	match app-id=r#"^discord$"#
-	match app-id=r#"^firefox-bin$"#
 	match app-id=r#"^helium$"#
 
 	open-on-workspace "web"
@@ -32,7 +32,7 @@ window-rule {
 	match app-id=r#"^steam_app_1259790$"# is-focused=true //ppt2
 	match app-id=r#"^steam_app_1966720$"# is-focused=true //lethal
 	match app-id=r#"^steam_app_728880$"# is-focused=true //overcooked 2
-	match app-id=r#"geometrydash.exe$"# is-focused=true
+	match app-id=r#"^geometrydash.exe$"# is-focused=true
 	match app-id=r#"^trackmania.exe$"# is-focused=true
 	match app-id=r#"^tetrio-desktop$"# is-focused=true
 
