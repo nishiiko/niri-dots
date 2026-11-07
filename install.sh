@@ -2,7 +2,7 @@
 read -p "this will copy files into:
 $HOME/.config/
 and will also rm -rf:
-$HOME/.config/alacritty
+$HOME/.config/kitty
 $HOME/.config/niri
 $HOME/.config/rofi
 $HOME/.config/waybar
@@ -29,7 +29,7 @@ if [ $confirm == "y" ]; then
         : $((countdown--))
     done
 
-    rm -rf $HOME/.config/alacritty
+    rm -rf $HOME/.config/kitty
     rm -rf $HOME/.config/niri
     rm -rf $HOME/.config/rofi
     rm -rf $HOME/.config/waybar
