@@ -1,13 +1,13 @@
 {
     "$schema": "$HOME/.config/fastfetch/json_schema.json",
     "logo": {
-    "source": "$HOME/.config/fastfetch/space.sixel",
-        "type": "raw",
-        "width": 24
+    "source": "$HOME/.config/fastfetch/space.png",
+        "type": "kitty",
+        "width": 25
   },
     "display": {
         "key": {
-            "width": 11
+            "width": 13
         },
         "bar": {
             "char.Elapsed": "=",
@@ -22,7 +22,10 @@
     "modules": [
         "title",
         "separator",
-        "wm",
+        {
+            "type": "wm",
+            "key": "Compositor",
+        },
         {
             "type": "command",
             "key": "OS Age",

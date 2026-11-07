@@ -9,7 +9,7 @@
 	},
     "display": {
         "key": {
-            "width": 11
+            "width": 13
         },
         "bar": {
             "char.Elapsed": "=",
@@ -21,9 +21,12 @@
         }
     },
     "modules": [
-		"title",
+        "title",
         "separator",
-		"wm",
+        {
+            "type": "wm",
+            "key": "Compositor",
+        },
         {
             "type": "command",
             "key": "OS Age",
