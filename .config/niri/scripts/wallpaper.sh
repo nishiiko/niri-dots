@@ -1,1 +1,1 @@
-../themes/space/wallpaper.sh
+../themes/tanger/wallpaper.sh
