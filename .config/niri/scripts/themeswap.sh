@@ -19,7 +19,7 @@ echo ok
 
 niri msg action do-screen-transition --delay-ms 750
 
-ln -sfrv $PWD/$theme/alacritty/colours.toml $HOME/.config/alacritty/
+ln -sfrv $PWD/$theme/kitty/colours.conf $HOME/.config/kitty/
 ln -sfrv $PWD/$theme/fastfetch/* $HOME/.config/fastfetch/
 ln -sfrv $PWD/$theme/niri/colours.kdl $HOME/.config/niri/config.kdl.d/
 ln -sfrv $PWD/$theme/rofi/background.png $HOME/.config/rofi/
@@ -27,6 +27,8 @@ ln -sfrv $PWD/$theme/rofi/colours.rasi $HOME/.config/rofi/
 ln -sfrv $PWD/$theme/swaync/colours.css $HOME/.config/swaync/
 ln -sfrv $PWD/$theme/waybar/colours.css $HOME/.config/waybar/
 ln -sfrv $PWD/$theme/wallpaper.sh $HOME/.config/niri/scripts/wallpaper.sh
+
+kill -SIGUSR1 $KITTY_PID
 
 swaync-client -R &
 swaync-client -rs &

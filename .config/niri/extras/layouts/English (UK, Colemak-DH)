@@ -1,7 +1,7 @@
 binds {
 	Mod+Shift+Slash { show-hotkey-overlay; }
 
-	Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+	Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "kitty" "--single-instance"; }
 	Mod+S hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
 	Mod+Ctrl+Shift+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock" "-c" ".config/niri/extras/hyprlock.conf"; }
 
