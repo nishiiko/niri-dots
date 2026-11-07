@@ -3,7 +3,7 @@
     "logo": {
     "source": "$HOME/.config/fastfetch/tanger.sixel",
         "type": "raw",
-        "width": 23
+        "width": 20
   },
     "display": {
         "key": {

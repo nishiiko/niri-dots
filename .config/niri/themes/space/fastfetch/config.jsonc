@@ -3,7 +3,7 @@
     "logo": {
     "source": "$HOME/.config/fastfetch/space.sixel",
         "type": "raw",
-        "width": 24
+        "width": 20
   },
     "display": {
         "key": {
