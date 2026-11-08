@@ -51,7 +51,7 @@ button:hover {
 	padding: 0rem 0.2rem;
 	margin: 0rem 0rem;
 	color: alpha(@inactive-text, 1);
-	transition: all 0.3s cubic-bezier(0.65,1,0.0,1)
+	transition: all 0.4s cubic-bezier(0.65,1,0.0,1)
 }
 
 #workspaces button:hover {
@@ -64,7 +64,7 @@ button:hover {
 	margin: 0.2rem 0rem;
 	color: alpha(@active-text, 1);
 	background-color: @button-hl;
-	transition: all 0.3s cubic-bezier(0.65,0,0.0,1)
+	transition: all 0.4s cubic-bezier(0.65,0,0.0,1)
 }
 
 #workspaces button.urgent {
