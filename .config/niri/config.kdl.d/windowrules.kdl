@@ -84,6 +84,7 @@ window-rule {
 window-rule {
 	match app-id=r#"^org.kde.kdenlive$"# title=r#"^Splash Screen — Kdenlive$"#
 	match app-id=r#"^[Ff]irefox(-esr|-bin|)$"# title=r#"^Picture-in-Picture$"#
+	match app-id=r#"^org.gnome.Settings.GlobalShortcutsProvider$"#
 	match app-id=r#"^org.fcitx.fcitx5-config-qt$"#
 	match app-id=r#"^org.pulseaudio.pavucontrol$"#
 	match app-id=r#"^com.saivert.pwvucontrol$"#
