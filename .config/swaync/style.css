@@ -12,8 +12,8 @@
 
 	--notification-shadow: 0.4rem 0.4rem 0.3rem #1A1A1AAA;
 
-	--font-size-body: 1rem;
-	--font-size-summary: 1.2rem;
+	--font-size-body: 1.25rem;
+	--font-size-summary: 1.45rem;
 
 	--hover-tranistion: background 0.15s ease-in-out;
 	--group-collapse-tranistion: opacity 400ms easi-in-out;

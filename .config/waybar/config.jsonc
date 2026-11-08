@@ -2,7 +2,7 @@
 {
 	"output": [ "DP-1", "eDP-1" ],
 	"layer": "top", // Waybar at top layer
-	"height": 50, // Waybar height (to be removed for auto height)
+	"height": 46, // Waybar height (to be removed for auto height)
 	// "width": 1920, // Waybar width
 	"position": "top", // Waybar position (top|bottom|left|right)
 	"spacing": 4, // Gaps between modules (4px)
@@ -116,7 +116,7 @@
 
 	"pulseaudio": {
 		"scroll-step": 5, // %, can be a float
-		"format": "{volume}% {icon}  ",
+		"format": "{volume}% {icon}   ",
 		//"format-bluetooth": "{volume}% {icon} ",
 		//"format-bluetooth-muted": "	",
 		"format-muted": "  ",
