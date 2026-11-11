@@ -21,9 +21,7 @@ blur {
 }
 
 window-rule {
-	exclude app-id=r#"^helium$"# title=r#"YouTube - Helium$"#
-	exclude app-id=r#"^helium$"# title=r#"Twitch - Helium$"#
-	exclude app-id=r#"^Alacritty$"#
+	exclude is-focused=true
 	opacity 0.95
 }
 

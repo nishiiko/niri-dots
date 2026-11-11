@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-sleep 3s
+sleep 1s
 pw-cat -p $HOME/.config/niri/scripts/assets/heal.wav &
