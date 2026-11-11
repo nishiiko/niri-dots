@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
+lockdir=$HOME/.vpnScript
 vpn_ip=
 state=
 sleep 0.2s
 
-state=$(ivpn status | grep '^VPN' )
-state="${state#*: }"
+until [ ! -e $lockdir ]; do
+	state=$(ivpn status | grep '^VPN' )
+	state="${state#*: }"
+done
+
+notify-send $state
+
 if [ "$state" = "DISCONNECTED" ]; then
 	echo '{"text":"VPN Disconnected","class":"disconnected","percentage":0}'
 	exit
