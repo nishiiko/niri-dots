@@ -59,7 +59,7 @@
 			"summary": "^Screenshot captured$",
 			"override-urgency": "critical"
 		},
-		"layout-swap": {
+		"niri-scripts": {
 			"app-name": "^niri-script$",
 			"override-urgency": "critical"
 		}
