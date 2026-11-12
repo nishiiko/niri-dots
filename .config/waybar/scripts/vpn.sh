@@ -19,7 +19,7 @@ fi
 state=$(ivpn status | grep '^VPN' )
 state="${state#*: }"
 
-vpn_ip=$(curl -s4 ipinfo.io | jq -r '"\(.ip) \(.country)"')
+vpn_ip=$(curl -s4 --json "" ip.wtf | jq -r '"\(.ip) \(.location.country)"')
 
 if [[ -n "$vpn_ip" ]]; then
 	jq -c -n --arg ip "$vpn_ip" '{"text":$ip,"class":"connected","percentage":100}'
