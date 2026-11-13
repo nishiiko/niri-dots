@@ -26,7 +26,7 @@ if [ "$state" = "CONNECTED" ]; then
   update_state
   notify-send "VPN Toggle" "$state" -ae niri-script
 else
-  ivpn connect -p openvpn -f -v2ray quic -filter_invert GB
+  ivpn connect -p wireguard -f -v2ray quic -cc NL
   for i in {1..100}; do
     if [ "$state" = "CONNECTED" ]; then
       break
