@@ -129,6 +129,6 @@
 			"car": "",
 			"default": ["", "", ""]
 		},
-		"on-click": "pkill pwvucontrol ; pwvucontrol"
+		"on-click": "pkill pavucontrol ; pavucontrol"
 	}
 }
