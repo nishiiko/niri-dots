@@ -8,7 +8,7 @@
 layer-rule {
 	match namespace="^swaync-notification-window$"
 	match namespace="^swaync-control-center$"
-	block-out-from "screencast"
+	block-out-from "screencast" kind="hide"
 }
 
 layer-rule {
